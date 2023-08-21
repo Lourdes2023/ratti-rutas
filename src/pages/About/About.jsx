@@ -1,9 +1,9 @@
 import React from "react";
 import {
+  AboutStylesContainer,
   AboutContainer,
   AboutSectionConten,
-  AboutStylesContainer,
-} from "./AboutStyle";
+} from "./AboutStyled";
 import Imagen4 from "../../assets/9.svg";
 import Imagen5 from "../../assets/2.svg";
 const About = () => {

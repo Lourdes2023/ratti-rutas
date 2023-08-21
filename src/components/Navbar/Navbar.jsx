@@ -17,7 +17,7 @@ const Navbar = () => {
       <MenuLinkContainer>
         <NavbarLinkStyled to={"/"}>Home</NavbarLinkStyled>
         <NavbarLinkStyled to={"/About"}>Nosotros</NavbarLinkStyled>
-        <NavbarLinkStyled to={"/Service"}>Servicios</NavbarLinkStyled>
+        <NavbarLinkStyled to={"/Services"}>Servicios</NavbarLinkStyled>
         <NavbarLinkStyled to={"/Contact"}>Contacto</NavbarLinkStyled>
       </MenuLinkContainer>
     </NavbarContainerStyled>

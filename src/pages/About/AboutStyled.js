@@ -6,8 +6,7 @@ export const AboutStylesContainer = styled.section`
   align-items: center;
   flex-direction: column;
   margin-top: 10vh;
-  background-color: var();
-  padding: 50px 0;
+  padding: 50px;
   border-radius: 18px;
   text-align: center;
   width: 80%;
