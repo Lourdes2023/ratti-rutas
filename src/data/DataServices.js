@@ -3,9 +3,9 @@ import Reducciones from "../assets/5.png";
 import Inhumaciones from "../assets/10.png";
 import Cremaciones from "../assets/6.png";
 import Traslados from "../assets/4.png";
-import ServiciosEspeciales from "../assets/8.svg";
+import ServiciosEspeciales from "../assets/ImgFlores/21.svg";
 
-export const servicesData = [
+export const ServicesData = [
   {
     id: 1,
     title: "Valatorios",
@@ -43,9 +43,9 @@ export const servicesData = [
   },
   {
     id: 6,
-    title: "Servicios Especiales",
+    title: "Flores para Funerales y Condolencias",
     description:
-      "Servicios personalizados y especiales para honrar la vida de manera única y significativa.",
+      "Nuestra selección de Flores está diseñada con cuidado, ofreciendo arreglos florales que expresan  apoyo y respeto en momentos de duelo.",
     imageUrl: ServiciosEspeciales,
   },
 ];

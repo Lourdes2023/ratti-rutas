@@ -1,12 +1,16 @@
 import Routes from "./Routes/Routes";
-
-import { GlobalStyles } from "./styles/GlobalStyles";
+import Footer from "./components/Footer/Footer";
+import Layout from "./components/Layout/Layout";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
-      <Routes />
-      <GlobalStyles />
+      <Layout>
+        <Navbar />
+        <Routes />
+        <Footer />
+      </Layout>
     </>
   );
 }

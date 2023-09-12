@@ -1,44 +1,37 @@
-import React from "react";
-import { HeroContainer, HeroImg, Herotext } from "./Hero";
-import image2 from "../../assets/heroImg.svg";
-
+import Hero from "../../components/Hero/Hero";
+import {
+  CategoryStyledContainer,
+  HomeContainer,
+  ProductStyledContainer,
+} from "./Homestyled";
+import About from "../../components/About/About";
+import Contact from "../../components/Contact/Contact";
+import Services from "../../components/Services/Services";
+import Categorias from "../../components/Categorias/Categorias";
+import { CategoryWrapper } from "../../components/Categorias/CategoriaStyles";
+import ProductsCart from "../../components/Product/ProductCards";
 const Home = () => {
   return (
-    <HeroContainer>
-      <Herotext>
-        {" "}
-        <h1>
-          DEJANOS CUIDARLO TODO
-          <br />
-          <span className="gradient-text">
-            {" "}
-            <i>CONTÁCTANOS</i>
-          </span>
-        </h1>
-        <span>
-          Desde el primer momento en que nos llamas, nos encargamos de los
-          trámites esenciales para dar inicio al servicio que corresponde.
-        </span>
-        <div style={{ padding: "14px" }}>
-          {" "}
-          {/* <Button>Urgencias 24hs</Button> */}
-        </div>
-      </Herotext>{" "}
-      <HeroImg>
-        <img
-          src={image2}
-          alt="imagen2"
-          style={{ width: "100%", borderRadius: "12px" }}
-        />
-        <p>
-          <i>
-            Las palabras pueden no ser suficientes, por eso estamos aquí para
-            brindarte nuestros servicios y productos que estan cuidadosamente
-            diseñada para honrar la memoria de tus seres queridos
-          </i>
-        </p>
-      </HeroImg>
-    </HeroContainer>
+    <HomeContainer>
+      <Hero />
+      <h3>Sobre Nosotros</h3>
+      <About />
+      <h3>Nuestros Servicios</h3>
+      <Services />{" "}
+      <CategoryStyledContainer>
+        <CategoryWrapper>
+          <h3>Nuestras Categorías</h3>
+          <Categorias />
+        </CategoryWrapper>
+      </CategoryStyledContainer>
+      <ProductStyledContainer>
+        <h3>Flores de condolencias</h3>
+        <ProductsCart />
+      </ProductStyledContainer>
+      <h3>Contacta a Nuestro Equipo</h3>
+      <Contact />
+      <h3>Envianos tu Consulta</h3>
+    </HomeContainer>
   );
 };
 

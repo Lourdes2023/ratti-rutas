@@ -1,22 +1,14 @@
-import styled from "styled-components";
-import Navbar from "../Navbar/Navbar";
-const LayoutContainerStyled = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-`;
-const ContentContainerStyled = styled.div``;
-
+import { useEffect } from "react";
+import { LayoutContainerStyled } from "./LayoutStyled";
+import { useLocation } from "react-router-dom";
 const Layout = ({ children }) => {
-  return (
-    <LayoutContainerStyled>
-      <Navbar />
-      <ContentContainerStyled> {children} </ContentContainerStyled>
-    </LayoutContainerStyled>
-  );
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return <LayoutContainerStyled>{children}</LayoutContainerStyled>;
 };
 
 export default Layout;

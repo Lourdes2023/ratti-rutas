@@ -10,15 +10,21 @@ export const GlobalStyles = createGlobalStyle`
       rgba(102, 108, 113, 0.498) 0px 0px 2rem inset;
   --color-title-Grad1: linear-gradient(to right,#e6d3ba, #b9a889,#8e5741, #b8574f  );
   --color-secondary: #620F1E;
-  --color-paragraph-text: #333333;
+  --color-button-cart:#494D52;
   --color-muted-text: #666666;
-  --color-title2: #e6d3ba ;
-  --color-buttonEm-bg: linear-gradient(to right,#b8574f  , #862d29);
+  --color-darkgray-contact:#626870 ;
+  --color-buttonEm-bg: linear-gradient(to right, #6b8c68,#73b266);
   --color-buttonEm-bg-hover: linear-gradient(to bottom, #73b266, #6b8c68);
-  --color-text-light: #f0f0f0;
+  --color--back--category: linear-gradient(45deg,#626870, #494D52);
+  --color-text-hero: #ffffff;
   --color-text-dark: #505854;
   --color-button-text: #ffffff;
   --color-button-hover: #c1bdb9;
+  --color-button-hoverCart:#b8574f;
+  --color-border:#f1efd4 ;
+  --color-contact-hover: #5CE1E6;
+  --color-text-contact:  #f1efd4;
+  --color-backg-contact: #5c413f;
 }
 
 /* Estilos generales */
