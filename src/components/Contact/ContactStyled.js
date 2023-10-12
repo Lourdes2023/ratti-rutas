@@ -44,6 +44,7 @@ export const WhatsAppLink = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
   height: 100%;
   border-radius: 5px;
   padding: 40px 0;

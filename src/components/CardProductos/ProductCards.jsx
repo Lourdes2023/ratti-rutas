@@ -6,7 +6,7 @@ import ButtonCart from "../UI/Button/ButtonCart";
 import { ButtonContainerStyle } from "../UI/Button/ButtonStyled";
 import { LIMITE_INICIAL } from "../../utilidades/constants";
 
-const ProductsCart = () => {
+const ProductsCard = () => {
   const [limit, setlimit] = useState(LIMITE_INICIAL);
   let products = useSelector((state) => state.products.products);
   const { selectedCategory } = useSelector((state) => state.categorias);
@@ -55,4 +55,4 @@ const ProductsCart = () => {
   );
 };
 
-export default ProductsCart;
+export default ProductsCard;

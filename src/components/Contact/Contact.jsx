@@ -4,6 +4,7 @@ import {
   WhatsAppLink,
   DataContactContainer,
 } from "./ContactStyled";
+import ForContact from "../Form/Form";
 import { FaPhone, FaMobile, FaWhatsapp } from "react-icons/fa";
 import { BiChevronDownCircle } from "react-icons/bi";
 
@@ -44,7 +45,8 @@ function Contact() {
             </p>
           </DataContactContainer>
         </WhatsAppLink>
-      </InfoContainer>
+      </InfoContainer>{" "}
+      <ForContact />
     </ContactContainer>
   );
 }

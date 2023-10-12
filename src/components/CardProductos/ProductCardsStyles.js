@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
 export const ProductContainer = styled.section`
   display: flex;
   justify-content: center;
@@ -7,10 +8,11 @@ export const ProductContainer = styled.section`
   flex-direction: column;
   padding: 60px;
   width: 80%;
-  margin-top: 8vh;
+  margin: 0 auto;
   h2 {
-    font-size: 16px;
-    color: var(--color-secondary);
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 40px;
   }
   @media (max-width: 780px) {
     padding: 0;
@@ -24,12 +26,9 @@ export const ProductWrapper = styled.div`
   flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 20px;
-  @media (min-width: 768px) {
-    grid-template-columns: no-repeat(3, 1fr);
-  }
 `;
 
-export const ProductConten = styled.div`
+export const ProductContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,37 +36,29 @@ export const ProductConten = styled.div`
   width: 240px;
   height: 340px;
   padding: 20px;
-  border: 1px solid #b8574f;
   border-radius: 5px;
-  background-color: #fff;
-  @media (max-width: 780px) {
-    width: 250px;
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow-color);
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover-color);
   }
 `;
 
 export const ProductImage = styled.img`
   width: 100%;
-  max-height: 150px;
+  max-height: 200px;
   object-fit: cover;
   margin-bottom: 10px;
 `;
 
 export const ProductTitle = styled.h4`
   font-size: 18px;
-  color: var(--color-secondary);
-  margin-bottom: 10px;
+  color: var(--primary-color);
 `;
 
 export const ProductDescription = styled.p`
   font-size: 14px;
-  color: var(--color-text-dark);
-`;
-export const LinkIten = styled(Link)`
-  padding: 5px 15px;
-  border-radius: 15px;
-  background-color: #e6d3ba;
-  transition: all 0.3s ease;
-  :hover {
-    background: crimson;
-  }
+  color: var(--secondary-color);
 `;

@@ -1,143 +1,212 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+// Contenedor principal del modal
 export const ModalContainerStyled = styled(motion.div)`
-  display: ${(props) => (props.hidden ? "none" : "block")};
+  display: ${(props) => (props.hidden ? "none" : "flex")};
   flex-direction: column;
-  justify-content: center;
+  overflow: scroll;
   align-items: center;
-  padding-top: 50px;
   width: auto;
   height: auto;
-  background-image: var(--color--back--category);
-  padding: 20px;
+  max-height: 80vh;
+  background: var(--color-back-Header);
+  padding: 50px 0px;
   position: absolute;
-  top: 0;
+  top: 150%;
   left: 10%;
   right: 10%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
 `;
 
+// Botón de cierre
 export const CloseButtonStyled = styled.div`
   height: 32px;
   color: white;
   margin-bottom: 20px;
+  position: absolute;
+  top: 24px;
+  right: 25px;
+  bottom: 0;
+  cursor: pointer;
   &:hover {
     color: gray;
   }
 `;
 
+// Título del modal
 export const TitleStyled = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 0 0 2rem 0;
-  & h1 {
-    color: var(--color-button-text);
+  align-items: center;
+
+  h1 {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-backg-contact);
     margin-top: 0;
+    border-bottom: 1px solid var(--color-text-contact);
   }
 `;
 
+// Contenedor principal
 export const ContainerStyled = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
 
-  width: auto;
-  height: 50%;
+  width: 100%;
+  background: var(--color-back-Services);
 `;
 
-export const ProductsWrapperStyled = styled.div`
+export const ProductsWrapperStyled = styled(motion.div)`
   display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
-  gap: 30px;
-  width: 80%;
-  height: auto;
+  height: 300px;
+  width: 50%;
+  overflow-x: scroll;
+  padding: 20px 10px;
   margin: 0 auto;
-  padding: 1rem;
-  padding-left: 0;
+  gap: 10px;
+  background: var(--color-back-Services);
+  p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const ProductContainerStyled = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
-  width: auto;
-  background: var(--color-muted-text);
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
-  padding: 1rem;
+  flex-direction: column;
+  padding: 10px;
+  gap: 5px;
+  width: 210px;
+  height: 190px;
   border-radius: 15px;
-  border: 1px solid var(--color-text-contact);
-  @media (max-height: 380px) {
-    flex-direction: column;
-  }
+  background: var(--color-backg-contact);
   & img {
     width: 80px;
     height: 80px;
-    border-radius: 16px;
+    border-radius: 20px;
     object-fit: cover;
   }
 `;
 
 export const TextContainerStyled = styled.div`
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 5px;
-  width: auto;
+  width: 60px;
 `;
 
 export const CardTitleStyled = styled.h3`
-  margin: 0;
-  margin-bottom: 2px;
-  font-weight: 500;
+  font-size: 12px;
+  color: var(--color-text-contact);
+  margin-bottom: 2em;
+  border-bottom: 1px solid var(--color-text-contact);
 `;
 
 export const TextStyled = styled.p`
-  margin: 0;
   color: white;
   font-size: 1rem;
+  color: var(--color-primary-blue);
   @media (max-height: 380px) {
-    display: none;
+    font-size: 0.8rem;
   }
 `;
 
 export const PriceStyled = styled.span`
-  font-weight: 800;
-  font-size: 1.2rem;
+  font-weight: 300;
+  font-size: 1rem;
   color: var(--color-text-contact);
 `;
 
 export const PriceContainerStyled = styled.div`
-  z-index: 1000;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-  & p {
+  p {
     text-align: center;
     margin-bottom: 0;
+    border-bottom: 1px solid var(--color-text-contact);
   }
 `;
 
-export const SubtotalStyled = styled.div`
+// Contenedor de título
+export const TitleContainerStyled = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 20px;
+  position: relative;
+  width: 80%;
+  margin-bottom: 1em;
+  gap: 50px;
+  border: 1px solid var(--color-text-contact);
+  & p {
+    font-size: 1rem;
+    margin-left: 1rem;
+    color: var(--color-text-contact);
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
-export const EnvioStyled = styled(SubtotalStyled)``;
-
-export const TotalStyled = styled(SubtotalStyled)``;
-
-export const ButtonContainerStyled = styled(SubtotalStyled)`
-  justify-content: center;
-`;
-
+// Contenedor de cantidad
 export const QuantityContainerStyled = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 50%;
+`;
+
+// Total
+export const TotalStyled = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  margin: 20px 0px;
+  padding: 0px 10px;
+  width: 90%;
+  border: 1px solid var(--color-text-contact);
+  gap: 20px;
+  color: var(--color-text-contact);
+`;
+
+export const Progress = styled.svg`
+  position: absolute;
+  top: 70px;
+  left: 25px;
+  transform: rotate(-90deg);
+  @media (max-width: 768px) {
+    width: 40px;
+    top: 29px;
+    left: 0;
+  }
+`;
+
+export const BackgroundCircle = styled.circle`
+  stroke-dashoffset: 0;
+  stroke-width: 15%;
+  fill: none;
+  stroke: var(--accent);
+  opacity: 0.3;
+`;
+
+export const IndicatorCircle = styled(motion.circle)`
+  stroke-dashoffset: 0;
+  stroke-width: 15%;
+  fill: none;
+  stroke: var(--accent);
 `;

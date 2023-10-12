@@ -42,7 +42,7 @@ export const Service = styled.div`
 `;
 
 export const ServiceImage = styled.img`
-  width: 100%;
+  width: 240px;
   max-height: 150px;
   object-fit: cover;
   margin-bottom: 10px;

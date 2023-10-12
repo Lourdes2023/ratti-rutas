@@ -19,7 +19,7 @@ export const CategoryConten = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: var(--color-backg-contact);
+  background: var(--color-Categories);
   border-radius: 10px;
   padding: 20px;
   border: 1px solid white;

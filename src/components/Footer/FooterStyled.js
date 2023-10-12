@@ -8,7 +8,7 @@ export const FooterContainerStyle = styled.footer`
   width: 100%;
   padding: 20px;
   margin-top: 10vh;
-  background-color: var(--color-back-seccion);
+  background-color: var(--color-back-Header);
 `;
 export const FooterContainer = styled.div`
   flex-direction: column;

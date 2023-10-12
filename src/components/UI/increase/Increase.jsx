@@ -1,19 +1,19 @@
-import { IncreaseStyled } from "./IncreaseStyles";
+import { BtnItemStyled } from "./IncreaseStyles";
 
-const Increase = ({
+const BtnItem = ({
   children,
   disabled = false,
   onClick = (e) => e.preventDefault(),
 }) => {
   return (
-    <IncreaseStyled
+    <BtnItemStyled
       whileTap={{ scale: 0.95 }}
       disabled={disabled}
       onClick={onClick}
     >
       {children}
-    </IncreaseStyled>
+    </BtnItemStyled>
   );
 };
 
-export default Increase;
+export default BtnItem;

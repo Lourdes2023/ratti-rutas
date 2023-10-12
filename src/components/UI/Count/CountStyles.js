@@ -5,7 +5,8 @@ export const CountStyled = styled.span`
   padding: 0 0.5rem;
   text-align: center;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
+  color: var(--color-text-contact);
   letter-spacing: 0.6px;
   opacity: 0.7;
 `;

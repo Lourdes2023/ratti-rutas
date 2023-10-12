@@ -10,15 +10,12 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: INITIALSTATE,
   reducers: {
-    //agregar
     addtocart: (state, action) => {
       return {
         ...state,
         cartItems: addItemToCart(state.cartItems, action.payload),
       };
     },
-
-    //remover
     removeFromCart: (state, action) => {
       return {
         ...state,

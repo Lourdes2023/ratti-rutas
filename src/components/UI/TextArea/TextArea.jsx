@@ -1,21 +1,27 @@
 import { ErrorMessage, Field } from "formik";
 import {
-  ErrorStyled,
-  InputContainerStyles,
-  LabelStyles,
-} from "../Input/inputStyles";
-import { TextAreaStyles } from "./TextAreaStyles";
+  TextAreaStyles,
+  ErrorMessageStyled,
+  TextAreaContainer,
+} from "./TextAreaStyles";
 
-const TextArea = ({ label, name, isError }) => {
+const TextArea = ({ placeholder, name, type }) => {
   return (
-    <>
-      <InputContainerStyles>
-        <LabelStyles htmlFor={label}>{label}</LabelStyles>
-        <Field name={name} id={label} error={isError} as={TextAreaStyles} />
-
-        <ErrorMessage name={name} component={ErrorStyled} />
-      </InputContainerStyles>
-    </>
+    <Field name={name}>
+      {({ field, form: { errors, touched } }) => (
+        <TextAreaContainer>
+          <TextAreaStyles
+            type={type}
+            placeholder={placeholder}
+            {...field}
+            isError={errors[field.name] && touched[field.name]}
+          />
+          <ErrorMessage name={field.name}>
+            {(mensaje) => <ErrorMessageStyled>{mensaje}</ErrorMessageStyled>}
+          </ErrorMessage>
+        </TextAreaContainer>
+      )}
+    </Field>
   );
 };
 

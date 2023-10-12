@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const AboutStylesContainer = styled.section`
@@ -8,7 +9,7 @@ export const AboutStylesContainer = styled.section`
   padding: 50px;
   border-radius: 18px;
   text-align: center;
-  width: 80%;
+  width: 100%;
   @media (max-width: 780px) {
     padding: 0px;
   }
@@ -18,6 +19,8 @@ export const AboutContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 50px;
+  width: 80%;
   @media (max-width: 780px) {
   }
 `;
@@ -32,7 +35,7 @@ export const AboutSectionConten = styled.div`
   gap: 20px;
   border: 10px solid white;
   border-radius: 5px;
-  background-color: var(--color-back-seccionlight);
+  background-image: var(--color-back-About);
   @media (max-width: 780px) {
     display: flex;
     justify-content: center;
@@ -41,7 +44,7 @@ export const AboutSectionConten = styled.div`
     flex-direction: column;
   }
   p {
-    color: var(--color-muted-text);
+    color: var(--color-secondary-blue);
     font-size: 18px;
     @media (max-width: 780px) {
       font-size: 16px;
@@ -49,7 +52,7 @@ export const AboutSectionConten = styled.div`
     }
   }
   h2 {
-    color: var(--color-secondary);
+    color: var(--color-secondary-green);
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -78,5 +81,13 @@ export const AboutSectionConten = styled.div`
     @media (max-width: 780px) {
       width: 100%;
     }
+  }
+`;
+export const fadeInAnimation = styled(motion.div)`
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  &.visible {
+    opacity: 1;
   }
 `;

@@ -1,27 +1,33 @@
 import styled from "styled-components";
 
-export const InputContainerStyles = styled.div`
+export const InputBoxStyled = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5px;
-`;
-
-export const InputStyles = styled.input`
-  width: 80%;
+  margin: 20px 0px;
   padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid var(--color-border);
-  border-radius: 20px;
+  background: var(--color-buttonLogin-bg);
 `;
 
-export const LabelStyles = styled.label`
-  display: block;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  color: var(--color-darkgray-contact);
+export const InputStyled = styled.input`
+  padding: 10px;
+  border: 1px solid var(--color-primary-blue);
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  background-color: aliceblue;
+  &:focus {
+    border-color: var(--color-primary);
+  }
+
+  ${({ isError }) =>
+    isError &&
+    `
+    border-color: red;
+   `}
 `;
-export const ErrorStyled = styled.span`
+
+export const ErrorMessageStyled = styled.p`
   color: red;
-  font-size: 14px;
-  margin-top: 4px;
+  font-size: 0.8rem;
+  margin-top: 5px;
 `;

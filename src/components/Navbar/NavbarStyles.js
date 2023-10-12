@@ -1,99 +1,165 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export const NavbarContainerStyled = styled.header`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   height: 4.5rem;
   width: 100%;
+  background-color: var(--color-back-Header);
   box-shadow: var(--color-shadow);
   position: fixed;
   top: 5px;
+  z-index: 2;
   bottom: 0;
-  background-color: white;
-  @media (max-width: 1200px) {
-  }
+  border: 1px solid white;
   @media (max-width: 1024px) {
-    justify-content: space-around;
+    gap: 20px;
+  }
+  @media (max-width: 380px) {
   }
 `;
-export const LogoConatiner = styled.div`
+export const NavbarContainer = styled(motion.nav)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  padding: 0 1rem;
+  filter: drop-shadow(1px 1px 1px #4700b3);
+  .menu {
+    width: 300px;
+  }
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 340px) {
+    padding: 0;
+  }
+`;
+
+export const LogoContainer = styled.div`
   font-family: "Times New Roman", Times, serif;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #632526;
   margin-left: 2rem;
   gap: 10px;
   & img {
     width: 50px;
-    @media (max-width: 380px) {
-      width: 40px;
-    }
   }
   h3 {
+    color: var(--color-Logo-text);
     font-size: 1.2rem;
   }
+  @media (max-width: 1024px) {
+    margin-left: 1rem;
+    margin-right: 0;
+  }
   @media (max-width: 780px) {
-    font-size: 8px;
-    margin-left: 0;
+    h3 {
+      font-size: 1em;
+    }
+  }
+  @media (max-width: 380px) {
+    img {
+      font-size: 1em;
+    }
   }
 `;
-export const MenuLinkContainer = styled.ul`
+export const LoginContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 
   @media (max-width: 1024px) {
-    display: ${(props) => (props.isOpen ? "flex" : "none")};
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 50px;
-    position: absolute;
-    top: 57px;
-    right: 2%;
-    height: auto;
-    width: 200px;
-    padding: 30px 0px;
-    border: 1px solid #6f6d6d9f;
-    border-radius: 5px;
-    transition: height 0.5s ease;
-    background: #343434;
+    gap: 30px;
   }
 `;
 
-export const NavbarLinkStyled = styled(NavLink)`
+export const MenuLinkContainer = styled(motion.ul)`
   display: flex;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  margin: 0px 18px;
-  color: var(--color-secondary);
-  border-radius: 8px;
-  transition: 0.5s all ease;
-  padding: 10px;
-  &:hover {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: var(--color-button-hover);
+  gap: 50px;
+  @media (max-width: 1024px) {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 300%;
+    width: 240px;
+    height: 390px;
+    gap: 10px;
+    padding: 0;
+    background-color: var(--color-back-Header);
+    z-index: 999;
+  }
+  @media (max-width: 380px) {
+    width: 210px;
+
+    gap: 10px;
+    padding: 0;
+    background-color: var(--color-back-Header);
+    z-index: 999;
   }
 `;
-export const NavbarLinkStyledProduct = styled(NavLink)`
+
+export const NavbarLinkStyled = styled(motion.li)``;
+export const Loginstyled = styled(Link)`
   display: flex;
-  font-size: 1rem;
-  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
   cursor: pointer;
-  border: 1px solid #8e5741;
-  color: var(--color-secondary);
-  border-radius: 18px;
-  transition: 0.5s all ease;
-  padding: 10px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 8px;
+  background-image: var(--color-buttonLogin-bg);
+  color: var(--color-button-text);
+  font-size: 14px;
+
   &:hover {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: var(--color-button-hover);
+    background-image: var(--color-buttonLogin-bg-hover);
+  }
+  &:active {
+    background-image: var(--color-buttonEm-bg-hover);
+  }
+  &:focus {
+    background-color: #e6e6e6;
+  }
+  span {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-text-contact);
+  }
+`;
+export const SignUpStyled = styled(Loginstyled)`
+  background: var(--color-buttonLogin-bg-hover);
+`;
+export const MenuLink = styled(NavLink)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  height: 40px;
+  width: 80px;
+  border-radius: 10px;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    background-color: #3c4857;
+  }
+  &.active {
+    background-color: #3c4857;
+  }
+  & p {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+    color: var(--color-text-contact);
   }
 `;
 
@@ -101,23 +167,63 @@ export const MenuItemLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 90%;
+  border: 1px solid var(--color-primary-blue);
+  border-radius: 10px;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+  }
 `;
-
-export const MobileIcont = styled.div`
-  display: none;
-
+export const ButtonStyles = styled(motion.button)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 2rem;
+  z-index: 1;
   @media (max-width: 1024px) {
-    display: flex;
-    font-size: 2em;
+    margin: 0;
+  }
+`;
+export const IconContainerStyles = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background: var(--color-primary-blue);
+  border-radius: 1em;
+  @media (max-width: 380px) {
+    padding: 10px;
+    height: 0.5em;
+    gap: 10px;
   }
 `;
 
-export const ModalOverlayStyled = styled(motion.div)`
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 50;
-  width: calc(100vw - 450px);
-  height: 100vh;
+export const MobileIcont = styled(motion.div)`
+  display: none;
+  @media (max-width: 1024px) {
+    display: flex;
+    color: var(--color-text-contact);
+    cursor: pointer;
+  }
+`;
+
+export const UserNameStyles = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  gap: 10px;
+  & p {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-text-contact);
+  }
+  @media (max-width: 580px) {
+    p {
+      display: none;
+    }
+  }
 `;

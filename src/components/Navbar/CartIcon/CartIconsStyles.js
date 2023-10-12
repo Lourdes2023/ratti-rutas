@@ -2,14 +2,35 @@ import styled from "styled-components";
 
 export const CartIconStyles = styled.div`
   display: flex;
-  border: 1px solid;
-  font-size: 1.5em;
+  position: relative;
+  font-size: 1em;
   padding: 5px;
-  background-image: var(--color-title-Grad1);
-  -webkit-background-clip: padding-box;
-  color: white;
+  color: var(--color-text-contact);
   border-radius: 5px;
-  @media (max-width: 380px) {
+  cursor: pointer;
+  margin: 10px;
+  @media (max-width: 780px) {
     font-size: 1em;
   }
+
+  @media (max-width: 380px) {
+    margin-right: 0;
+  }
+`;
+
+export const CountCart = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 90%;
+  bottom: 100%;
+  font-size: 0.5em;
+  color: white;
+  background-color: var(--color-secondary-red);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
 `;

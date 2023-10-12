@@ -1,32 +1,46 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
- 
- :root {
-  --color-back-body: #D4D0D0;
-  --color-back-seccion:#78695A;
-  --color-back-seccionlight:#f3f4f6;
-  --color-shadow: rgba(102, 108, 113, 0.498) 0px 0px 5rem inset,
-      rgba(102, 108, 113, 0.498) 0px 0px 2rem inset;
-  --color-title-Grad1: linear-gradient(to right,#e6d3ba, #b9a889,#8e5741, #b8574f  );
-  --color-secondary: #620F1E;
-  --color-button-cart:#494D52;
+:root {
+  --color-back-body: #f5f7fa;
+  --color-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --color-back-Header: #2a333c;
+  --color-Logo-text: #620F1E;
+  --color-title-Grad1: linear-gradient(25deg, #a0aec0, #4a5568);
+  --primary-color: #4a5568;
+    --secondary-color: #718096;
+    --background-color: #ffffff;
+    --box-shadow-color:0 4px 8px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover-color: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --color-primary-blue: #0077b6;
+  --color-secondary-blue: #219ebc;
+  --color-secondary-red: #b80c09;
+  --color-secondary-green: #4caf50;
+  --color-button-cart: #4a5568;
   --color-muted-text: #666666;
-  --color-darkgray-contact:#626870 ;
-  --color-buttonEm-bg: linear-gradient(to right, #6b8c68,#73b266);
-  --color-buttonEm-bg-hover: linear-gradient(to bottom, #73b266, #6b8c68);
-  --color--back--category: linear-gradient(45deg,#626870, #494D52);
-  --color-text-hero: #ffffff;
+  --color-Categories: #3a0a07;
+  --color-darkgray-contact: #626870;
+  --color--title-seccion: #718096;
+  --color-buttonLogin-bg: linear-gradient(to right, #0077b6, #219ebc);
+  --color-buttonEm-bg: linear-gradient(to right, #f5f7fa, #a0aec0);
+  --color-buttonLogin-bg-hover: linear-gradient(to right, #219ebc, #0077b6);
+  --color-buttonEm-bg-hover: linear-gradient(to bottom, #f5f7fa, #4a5568);
+  --color--back-products: linear-gradient(to right, #a0aec0, #4a5568);
+  --color-backg-contact: #4a5568;
+  --color--back-category: linear-gradient(to right, #a0aec0, #ececec);
+  --color-back-About: linear-gradient(24deg, #f5f7fa, #e4e7eb);
+  --color-back-Services: linear-gradient(45deg, #a0aec0, #f5f7fa);
+  --color-text-hero: #4A5568;
   --color-text-dark: #505854;
   --color-button-text: #ffffff;
-  --color-button-hover: #c1bdb9;
-  --color-button-hoverCart:#b8574f;
-  --color-border:#f1efd4 ;
+  --color-button-hover: #f5f7fa;
+  --color-button-hoverCart: #b8574f;
+  --color-border-blue: #e4e7eb;
+  --color-border-button: #933333;
+  --color-text-contact: #f1efd4;
   --color-contact-hover: #5CE1E6;
-  --color-text-contact:  #f1efd4;
-  --color-backg-contact: #5c413f;
+  --accent : #F2CC8F;
 }
-
 /* Estilos generales */
 body {
   font-family: "Fira Sans", sans-serif;

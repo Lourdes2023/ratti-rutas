@@ -6,7 +6,11 @@ const ButtonCart = ({
   onClick = (e) => e.preventDefault(),
 }) => {
   return (
-    <ButtonStylesCart disabled={disabled} onClick={onClick}>
+    <ButtonStylesCart
+      disabled={disabled}
+      onClick={onClick}
+      whileTap={{ scale: 0.97 }}
+    >
       {children}
     </ButtonStylesCart>
   );
