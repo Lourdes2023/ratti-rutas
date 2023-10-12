@@ -15,7 +15,6 @@ import QueHacerAnteUnaDefuncion from "../components/UserProfile/Recomend-Defunci
 import Seguros from "../components/UserProfile//Seguros/Seguros";
 import PresupuestoForm from "../components/UserProfile/Crea-Presupuesto/Presupuesto";
 import RouteProtection from "../components/RouteProtection/RouteProtection";
-import MisCompras from "../components/UserProfile/Mis-Compras/MisCompras";
 import Payment from "../pages/Payment/Payment";
 import Micuenta from "../components/UserProfile/MiCuenta/Micuenta";
 import Felicitaciones from "../pages/Felicitaciones/Felicitaciones";
@@ -49,7 +48,6 @@ const Routes = () => {
           element={<QueHacerAnteUnaDefuncion />}
         />{" "}
         <Route path="/TramitePostFuneral" element={<TramitePostFuneral />} />
-        <Route path="/miscompras" element={<MisCompras />} />
         <Route path="/Seguros" element={<Seguros />} />
         <Route path="/PresupuestoForm" element={<PresupuestoForm />} />{" "}
         <Route path="/felicitaciones" element={<Felicitaciones />} />
