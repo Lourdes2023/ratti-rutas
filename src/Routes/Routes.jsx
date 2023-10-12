@@ -5,7 +5,7 @@ import Services from "../components/Services/Services";
 import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
 import User from "../pages/user/user";
-import Service from "../pages/service/service";
+import Service from "../pages/service/Service";
 import Products from "../pages/Products/Products";
 import Login from "../pages/Login/Login";
 import Checkout from "../pages/Checkout/checkout";
@@ -27,7 +27,7 @@ const Routes = () => {
         <Route path="About" element={<About />} />
         <Route path="Services">
           <Route index element={<Services />} />
-          <Route path=":Service" element={<Service />} />
+          <Route path=" /:Service" element={<Service />} />
         </Route>
         <Route path="user/:username" element={<User />} />
         <Route path="contact" element={<Contact />} />
