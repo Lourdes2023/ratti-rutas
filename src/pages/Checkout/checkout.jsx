@@ -1,17 +1,24 @@
+import { useSelector } from 'react-redux';
 import ShippingForm from "../../components/Form/ShippingForm/ShippingForm";
-import Summary from "../../components/Resumen/Summary";
 import {
   CheckoutContainerStyled,
   SummaryContainerStyled,
 } from "./CheckoutStyles";
-import { useSelector } from "react-redux";
+
 
 const Checkout = () => {
+const { cartItems } = useSelector((state) => state.cart);
+const price = cartItems.reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
+
   return (
     <>
       <CheckoutContainerStyled>
         <SummaryContainerStyled>
-          <Summary />
+          <ShippingForm
+          cartItems={cartItems}
+          price={price}
+        
+          />
         </SummaryContainerStyled>
       </CheckoutContainerStyled>
     </>

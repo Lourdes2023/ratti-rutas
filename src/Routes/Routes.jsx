@@ -18,6 +18,7 @@ import RouteProtection from "../components/RouteProtection/RouteProtection";
 import Payment from "../pages/Payment/Payment";
 import Micuenta from "../components/UserProfile/MiCuenta/Micuenta";
 import Felicitaciones from "../pages/Felicitaciones/Felicitaciones";
+import Orders from "../pages/ordenes/orders";
 const Routes = () => {
   return (
     <>
@@ -46,7 +47,8 @@ const Routes = () => {
         <Route
           path="/QueHacerAnteUnaDefuncion"
           element={<QueHacerAnteUnaDefuncion />}
-        />{" "}
+        />
+         <Route path="/Orders" element={<Orders/>} />
         <Route path="/TramitePostFuneral" element={<TramitePostFuneral />} />
         <Route path="/Seguros" element={<Seguros />} />
         <Route path="/PresupuestoForm" element={<PresupuestoForm />} />{" "}

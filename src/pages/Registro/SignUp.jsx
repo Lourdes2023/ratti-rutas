@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import { ButtonContainerStyle } from "../../components/UI/Button/ButtonStyled";
 import Logo from "../../assets/logo2.png";
 import { CreateUser } from "../../axios/axiosUser";
-import { setCurrentUser } from "../../redux/user/userSlice";
+import { setCurrentUser, setToken } from "../../redux/user/userSlice";
 import { useDispatch } from "react-redux";
 import useCheckAuth from "../../hooks/useRedirect";
 const SignUp = () => {
@@ -34,13 +34,12 @@ const SignUp = () => {
               values.email,
               values.password
             );
+            console.log(result)
             actions.resetForm();
             if (user) {
-              dispatch(
-                setCurrentUser({
-                  ...user.usuario,
-                })
-              );
+              dispatch(setCurrentUser(
+                {...user.usuario}));
+
             }
           }}
         >

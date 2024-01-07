@@ -19,11 +19,6 @@ export const InputStyled = styled.input`
     border-color: var(--color-primary);
   }
 
-  ${({ isError }) =>
-    isError &&
-    `
-    border-color: red;
-   `}
 `;
 
 export const ErrorMessageStyled = styled.p`

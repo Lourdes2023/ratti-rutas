@@ -12,9 +12,11 @@ const userSlice = createSlice({
     setCurrentUser: (state, action) => {
       return {
         ...state,
-        currentUser: action.payload,
+        currentUser : action.payload,
+        
       };
     },
+   
     toggleMenu: (state) => {
       return {
         ...state,
@@ -24,5 +26,5 @@ const userSlice = createSlice({
   },
 });
 
-export const { setCurrentUser, toggleMenu } = userSlice.actions;
+export const { setCurrentUser, toggleMenu, setToken } = userSlice.actions;
 export default userSlice.reducer;

@@ -47,7 +47,7 @@ const Felicitaciones = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       console.log("Redirigiendo...");
-      navigate("/");
+      navigate("/Orders");
     }, 3000);
     return () => clearTimeout(timeoutId);
   }, []);

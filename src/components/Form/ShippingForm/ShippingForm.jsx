@@ -8,11 +8,14 @@ import { initialValuesShipping } from "../../../formik/initialValues";
 import { validationSchemaShipping } from "../../../formik/validationSchema";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { createOrder } from "../../../axios/axiosOrdenes";
 
-import { addShippingInfo } from "../../../redux/Form/FormSlice";
-const ShippingForm = () => {
+
+const ShippingForm = ( {cartItems, price  } ) => {
   const navigate = useNavigate;
   const dispatch = useDispatch();
+  const currentUser =  useSelector(state => state.user);
   return (
     <ShippingFormContainer>
       <ShippingFormTitle>Finalizá tu compra</ShippingFormTitle>
@@ -28,9 +31,24 @@ const ShippingForm = () => {
       <Formik
         initialValues={initialValuesShipping}
         validationSchema={validationSchemaShipping}
-        onSubmit={(values) => {
-          dispatch(addShippingInfo(values));
-        }}
+        onSubmit={ async (values) => {
+          const orderData = {
+            items: cartItems,
+            price,
+            total: price,
+            shippingDetails: {...values}
+          };
+          try {
+            console.log(orderData, dispatch, currentUser);
+            await createOrder(orderData, dispatch, currentUser);
+            navigate("/felicitaciones")
+            dispatch(clearCart())
+          } catch (error) {
+            console.error(error);
+            alert("Error al crear la orden")
+          }
+        }
+      }
       >
         {({ isSubmitting }) => (
           <Form>

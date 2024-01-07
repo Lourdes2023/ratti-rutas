@@ -89,7 +89,7 @@ const CartModal = () => {
               dispatch(toggleHiddenCART());
             }}
           >
-            Continuar
+            Iniciar pedido
           </Submit>
         </TitleStyled>
       </ModalContainerStyled>

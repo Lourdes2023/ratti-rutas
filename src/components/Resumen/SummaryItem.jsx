@@ -1,20 +1,21 @@
 import {
   SummaryItemContainer,
   SummaryItemTitle,
-  SummaryItemQuantity,
   SummaryItemPrice,
   SummaryImage,
 } from "./SummaryStyled";
 
-const SummaryItem = ({ title, quantity, price, img }) => {
+const SummaryItem = ({ total, _id,status}) => {
+
+
   return (
-    <SummaryItemContainer>
+    <SummaryItemContainer onClick={()=> Navigate("")}>
       <SummaryImage>
-        <SummaryItemTitle>{title}</SummaryItemTitle>
+        <SummaryItemTitle>N° de Orden: {_id.slice(0,7)}</SummaryItemTitle>
         <img src={img} alt="" />
       </SummaryImage>
-      <SummaryItemQuantity> x {quantity}</SummaryItemQuantity>
-      <SummaryItemPrice>AR$ {price * quantity}</SummaryItemPrice>
+      <SummaryItemTitle>Estado: {status}</SummaryItemTitle>
+      <SummaryItemPrice>AR$ {total}</SummaryItemPrice>
     </SummaryItemContainer>
   );
 };

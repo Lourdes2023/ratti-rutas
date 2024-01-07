@@ -7,34 +7,34 @@ import { Formik } from "formik";
 import { LoginUser } from "../../axios/axiosUser";
 import { loginInitialValues } from "../../formik/initialValues";
 import { loginValidationSchema } from "../../formik/validationSchema";
-import { setCurrentUser } from "../../redux/user/userSlice";
+import Logo from "../../assets/logo2.png";
+import useCheckAuth from "../../hooks/useRedirect";
 import {
   TitleContainer,
   LoginStyledContainer,
   LoginStyled,
 } from "./LoginStyles";
-import Logo from "../../assets/logo2.png";
 import { useDispatch } from "react-redux";
-import useCheckAuth from "../../hooks/useRedirect";
+
 const Login = () => {
-  const dispatch = useDispatch();
+
+const dispatch = useDispatch();
   useCheckAuth("/");
+
+  
   return (
     <FormContainer>
       <Formik
-        initialValues={loginInitialValues}
-        validationSchema={loginValidationSchema}
-        onSubmit={async (values) => {
-          const user = await LoginUser(values.email, values.password);
-          if (user) {
-            dispatch(
-              setCurrentUser({
-                ...user.usuario,
-                token: user.token,
-              })
-            );
-          }
-        }}
+         initialValues={loginInitialValues}
+         validationSchema={loginValidationSchema}
+         onSubmit={async (values) => {
+           const user = await LoginUser(values.email, values.password)
+            console.log(user);
+           if(user){
+            dispatch(setCurrentUser({...user.usuario, token: user.token}));
+        
+           }         
+         }}
       >
         <LoginStyledContainer>
           <Form>
