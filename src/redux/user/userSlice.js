@@ -1,20 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-const INITIALSTATE = {
+const INITIAL_STATE = {
   currentUser: null,
   hiddenMenu: true,
 };
 
 const userSlice = createSlice({
   name: "user",
-  initialState: INITIALSTATE,
+  initialState: INITIAL_STATE,
   reducers: {
     setCurrentUser: (state, action) => {
       return {
         ...state,
         currentUser: action.payload,
-        
       };
     },
     toggleMenu: (state) => {
