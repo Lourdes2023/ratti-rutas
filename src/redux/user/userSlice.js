@@ -17,8 +17,6 @@ const userSlice = createSlice({
         
       };
     },
-  
-
     toggleMenu: (state) => {
       return {
         ...state,

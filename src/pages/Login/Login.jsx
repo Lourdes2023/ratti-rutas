@@ -32,7 +32,7 @@ const Login = () => {
           const user = await LoginUser(values.email, values.password)
           console.log("Login usuario:",user);
           if(user){
-            dispatch(setCurrentUser({...user.usuario, token: user.Token}))
+            dispatch(setCurrentUser({...user.usuario, Token: user.Token}))
           }         
         }}
       >
