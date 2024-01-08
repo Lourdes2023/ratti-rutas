@@ -13,7 +13,7 @@ import { createOrder } from "../../../axios/axiosOrdenes";
 
 
 const ShippingForm = ( {cartItems, price  } ) => {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const currentUser =  useSelector(state => state.user);
   return (

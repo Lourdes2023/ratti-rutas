@@ -22,7 +22,7 @@ const Orders = () => {
       getOrders(dispatch, currentUser)
     }
 
-    if(!currentUser?.token) {
+    if(!currentUser?.Token) {
       dispatch(fetchOrderFail())
     } else {
       error && dispatch(clearError())
