@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
 const INITIALSTATE = {
   currentUser: null,
   hiddenMenu: true,
+  token: null,
 };
 
 const userSlice = createSlice({
@@ -16,7 +18,8 @@ const userSlice = createSlice({
         
       };
     },
-   
+  
+
     toggleMenu: (state) => {
       return {
         ...state,
@@ -26,5 +29,5 @@ const userSlice = createSlice({
   },
 });
 
-export const { setCurrentUser, toggleMenu, setToken } = userSlice.actions;
+export const { setCurrentUser, toggleMenu } = userSlice.actions;
 export default userSlice.reducer;

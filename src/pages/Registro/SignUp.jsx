@@ -15,12 +15,12 @@ import { Link } from "react-router-dom";
 import { ButtonContainerStyle } from "../../components/UI/Button/ButtonStyled";
 import Logo from "../../assets/logo2.png";
 import { CreateUser } from "../../axios/axiosUser";
-import { setCurrentUser, setToken } from "../../redux/user/userSlice";
+import { setCurrentUser } from "../../redux/user/userSlice";
 import { useDispatch } from "react-redux";
 import useCheckAuth from "../../hooks/useRedirect";
 const SignUp = () => {
   const dispatch = useDispatch();
-  useCheckAuth("/");
+  useCheckAuth("/Login");
 
   return (
     <SignUpStyled>
@@ -34,7 +34,7 @@ const SignUp = () => {
               values.email,
               values.password
             );
-            console.log(result)
+            console.log(user)
             actions.resetForm();
             if (user) {
               dispatch(setCurrentUser(

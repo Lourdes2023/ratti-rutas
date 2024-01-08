@@ -14,27 +14,30 @@ import {
   LoginStyledContainer,
   LoginStyled,
 } from "./LoginStyles";
-import { useDispatch } from "react-redux";
+import { useDispatch } from 'react-redux';
+import { setCurrentUser } from "../../redux/user/userSlice";
 
 const Login = () => {
 
-const dispatch = useDispatch();
+  const dispatch = useDispatch();
   useCheckAuth("/");
 
   
   return (
     <FormContainer>
       <Formik
-         initialValues={loginInitialValues}
-         validationSchema={loginValidationSchema}
-         onSubmit={async (values) => {
-           const user = await LoginUser(values.email, values.password)
-            console.log(user);
-           if(user){
-            dispatch(setCurrentUser({...user.usuario, token: user.token}));
-        
-           }         
-         }}
+        initialValues={loginInitialValues}
+        validationSchema={loginValidationSchema}
+        onSubmit={async (values) => {
+          const user = await LoginUser(values.email, values.password)
+          console.log("Login usuario:",user);
+          if(user){
+            dispatch(setCurrentUser({
+              ...user.usuario,
+              token: user.token
+            }));
+          }         
+        }}
       >
         <LoginStyledContainer>
           <Form>
