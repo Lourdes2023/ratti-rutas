@@ -4,7 +4,6 @@ import { createSlice } from "@reduxjs/toolkit";
 const INITIALSTATE = {
   currentUser: null,
   hiddenMenu: true,
-  token: null,
 };
 
 const userSlice = createSlice({
@@ -14,7 +13,7 @@ const userSlice = createSlice({
     setCurrentUser: (state, action) => {
       return {
         ...state,
-        currentUser : action.payload,
+        currentUser: action.payload,
         
       };
     },
