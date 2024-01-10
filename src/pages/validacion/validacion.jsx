@@ -1,44 +1,52 @@
-import LoginInput from '../../components/UI/LoginInput/LoginInput';
+
+import { Formik } from 'formik';
 import Submit from '../../components/UI/Submit/Submit';
 import { useNavigate } from 'react-router-dom';
-import { Form, ValidateContainerStyled } from './ValidateStyles';
+import { ValidateContainerStyled } from './ValidateStyles';
 import { useDispatch, useSelector } from 'react-redux';
-import { verifyUser } from '../../axios/axios-user';
-import { validateInitialValues, validateValidationSchema } from '../../formik';
-import { setCurrentUser, setVerified } from '../../redux/user/userSlice';
+import { validateInitialValues } from '../../formik/initialValues';
+import { validateValidationSchema } from '../../formik/validationSchema';
+import Input from '../../components/UI/Input/Input';
+import { Form } from '../../components/Form/FormStyles';
+import { verifyUser } from '../../axios/axiosUser';
+
+
+
+
+
 
 const Validate = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const currentUser = useSelector((state) => state.user.currentUser);
+  const codeFromAPI = useSelector((state) => state.user.currentUser.code);
 
-  useEffect(() => {
-    if (!currentUser) {
-      navigate('/login');
-    } else if (currentUser.verified) {
-      navigate('/');
-    }
-  }, [currentUser, navigate]);
 
   return (
     <ValidateContainerStyled>
       <h1>Validar cuenta</h1>
+      <p>Ingrese este código para validar su cuenta: {codeFromAPI}</p>
       <Formik
         initialValues={validateInitialValues}
         validationSchema={validateValidationSchema}
         onSubmit={async (values) => {
-          try {
-            const result = await verifyUser(currentUser.email, values.code);
-            dispatch(setVerified(result.isVerified));
+          const { email, code } = values; 
+          const response = await verifyUser(email, code); 
+          if (response) {
             navigate('/');
-          } catch (error) {
-            // Muestra un mensaje de error al usuario
-            alert(error.response.data.msg);
           }
         }}
       >
         <Form>
-          <LoginInput name="code" type="code" placeholder="code" />
+          <Input
+            name="email"
+            type="email"
+            placeholder="email"
+          />
+          <Input
+            name="code"
+            type="code"
+            placeholder="code"
+          />
           <Submit>Validar</Submit>
         </Form>
       </Formik>

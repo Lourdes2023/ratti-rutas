@@ -22,8 +22,12 @@ export const getOrders = async (dispatch, currentUser) => {
               dispatch(fetchOrderSuccess(orders.data.data));
     }
  } catch (error) {
-   console.log(error);
-      dispatch(fetchOrderFail("Upss, algo salío mal. Intentalo de nuevo"));
+   console.log('ERROR: ',error);
+   if (error.response) {
+    console.log('Response data:', error.response.data);
+    console.log('Response status:', error.response.status);
+  }
+    dispatch(fetchOrderFail("Upss, algo salío mal. Intentalo de nuevo"));
  }
 };
 

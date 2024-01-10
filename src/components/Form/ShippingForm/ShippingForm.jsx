@@ -10,12 +10,13 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { createOrder } from "../../../axios/axiosOrdenes";
+import { clearCart } from "../../../redux/cart/Slice.Cart";
 
 
-const ShippingForm = ( {cartItems, price  } ) => {
+const ShippingForm = ( {cartItems, total  } ) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const currentUser =  useSelector(state => state.user);
+  const currentUser =  useSelector(state => state.user.currentUser);
   return (
     <ShippingFormContainer>
       <ShippingFormTitle>Finalizá tu compra</ShippingFormTitle>
@@ -32,20 +33,20 @@ const ShippingForm = ( {cartItems, price  } ) => {
         initialValues={initialValuesShipping}
         validationSchema={validationSchemaShipping}
         onSubmit={ async (values) => {
-          const orderData = {
+          const orderData = { 
+            price: total,
             items: cartItems,
-            price,
-            total: price,
-            shippingDetails: {...values}
+            shippingDetails: {...values},
+            total: total *2,
           };
           try {
             console.log(orderData, dispatch, currentUser);
             await createOrder(orderData, dispatch, currentUser);
-            navigate("/felicitaciones")
-            dispatch(clearCart())
+           navigate("/PaymentForm");
+            dispatch(clearCart());
           } catch (error) {
             console.error(error);
-            alert("Error al crear la orden")
+            alert("No se ha creado la orden")
           }
         }
       }

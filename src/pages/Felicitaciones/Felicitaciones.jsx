@@ -54,7 +54,7 @@ const Felicitaciones = () => {
 
   return (
     <Container>
-      <Title> Ha realizado una compra exitosa!</Title>
+      <Title> Felicitaciones ha realizado una compra exitosa!</Title>
       <Container
         className="box"
         animate={{

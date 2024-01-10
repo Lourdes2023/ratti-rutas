@@ -9,10 +9,9 @@ const SummaryItem = ({ total, _id,status}) => {
 
 
   return (
-    <SummaryItemContainer onClick={()=> Navigate("")}>
+    <SummaryItemContainer>
       <SummaryImage>
-        <SummaryItemTitle>N° de Orden: {_id.slice(0,7)}</SummaryItemTitle>
-        <img src={img} alt="" />
+        <SummaryItemTitle>N° de Orden: {_id.slice(0,9)}</SummaryItemTitle>
       </SummaryImage>
       <SummaryItemTitle>Estado: {status}</SummaryItemTitle>
       <SummaryItemPrice>AR$ {total}</SummaryItemPrice>

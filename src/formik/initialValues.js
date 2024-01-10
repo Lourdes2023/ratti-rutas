@@ -40,3 +40,11 @@ export const initialValuesPresupuesto = {
   codigoPostal: "",
   fallecimiento: "",
 };
+
+export const validateInitialValues= {
+
+   email: "",
+   code: "",
+};
+
+

@@ -20,7 +20,7 @@ import { useDispatch } from "react-redux";
 import useCheckAuth from "../../hooks/useRedirect";
 const SignUp = () => {
   const dispatch = useDispatch();
-  useCheckAuth("/Login");
+  useCheckAuth("/Validate");
 
   return (
     <SignUpStyled>
@@ -34,11 +34,11 @@ const SignUp = () => {
               values.email,
               values.password
             );
-            console.log(user)
+            console.log(user.usuario.code)
             actions.resetForm();
             if (user) {
               dispatch(setCurrentUser(
-                {...user.usuario}));
+                {...user.usuario,code: user.usuario.code }));
 
             }
           }}

@@ -6,14 +6,14 @@ import categoriesReducer from "./categorias/categoriesSlice";
 import productsReducer from "./products/ProductSlice";
 import cartReducer from "./cart/Slice.Cart";
 import userReducer from "./user/userSlice";
-import ordersReduder from "./ordenes/OrderSlice";
+import ordersReducer from "./ordenes/OrderSlice";
 import FormReducer from "./Form/FormSlice";
 const reducers = combineReducers({
   categorias: categoriesReducer,
   products: productsReducer,
   cart: cartReducer,
   user: userReducer,
-  orders: ordersReduder,
+  orders: ordersReducer,
   form: FormReducer,
 });
 

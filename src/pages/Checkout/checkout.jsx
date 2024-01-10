@@ -8,7 +8,7 @@ import {
 
 const Checkout = () => {
 const { cartItems } = useSelector((state) => state.cart);
-const price = cartItems.reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
+const total = cartItems.reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
 
   return (
     <>
@@ -16,8 +16,7 @@ const price = cartItems.reduce((acc, curr) => acc + curr.price * curr.quantity, 
         <SummaryContainerStyled>
           <ShippingForm
           cartItems={cartItems}
-          price={price}
-        
+          total={total}   
           />
         </SummaryContainerStyled>
       </CheckoutContainerStyled>

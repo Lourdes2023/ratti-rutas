@@ -19,6 +19,9 @@ import Payment from "../pages/Payment/Payment";
 import Micuenta from "../components/UserProfile/MiCuenta/Micuenta";
 import Felicitaciones from "../pages/Felicitaciones/Felicitaciones";
 import Orders from "../pages/ordenes/orders";
+import Validate from "../pages/validacion/validacion";
+import  PaymentForm from "../components/Form/PaymentForm/PaymentForm";
+
 const Routes = () => {
   return (
     <>
@@ -34,6 +37,7 @@ const Routes = () => {
         <Route path="products" element={<Products />} />
         <Route path="login" element={<Login />} />
         <Route path="SignUp" element={<SignUp />} />
+        <Route path="validate" element={<Validate/>} />
         <Route
           path="/checkout"
           element={
@@ -53,6 +57,7 @@ const Routes = () => {
         <Route path="/Seguros" element={<Seguros />} />
         <Route path="/PresupuestoForm" element={<PresupuestoForm />} />{" "}
         <Route path="/felicitaciones" element={<Felicitaciones />} />
+        <Route path="/PaymentForm" element={<PaymentForm />} />
         <Route path="*" element={<h2>Error</h2>} />
       </ReactDomRoutes>
     </>

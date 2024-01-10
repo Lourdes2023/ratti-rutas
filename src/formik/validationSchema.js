@@ -54,3 +54,10 @@ export const validationSchemaPresupuesto = Yup.object({
   codigoPostal: Yup.string().required("El código postal es obligatorio"),
   fallecimiento: Yup.boolean().required("Este campo es obligatorio"),
 });
+
+export const validateValidationSchema= Yup.object({
+  email: Yup.string()
+    .email("El correo electrónico no es válido")
+    .required("El correo electrónico es obligatorio"),
+  code: Yup.string().required("El código es obligatorio"),
+});

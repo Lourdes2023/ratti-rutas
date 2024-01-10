@@ -47,6 +47,7 @@ export const SummaryItemContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 15vh;
   margin-bottom: 5rem;
 
   & h2 {
