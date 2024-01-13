@@ -11,16 +11,18 @@ import { Formik } from "formik";
 import { registerInitialValues } from "../../formik/initialValues";
 import Input from "../../components/UI/Input/Input";
 import { registerValidationSchema } from "../../formik/validationSchema";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ButtonContainerStyle } from "../../components/UI/Button/ButtonStyled";
 import Logo from "../../assets/logo2.png";
 import { CreateUser } from "../../axios/axiosUser";
 import { setCurrentUser } from "../../redux/user/userSlice";
 import { useDispatch } from "react-redux";
-import useCheckAuth from "../../hooks/useRedirect";
+
+
+
 const SignUp = () => {
   const dispatch = useDispatch();
-  useCheckAuth('/login');
+  const navigate = useNavigate();
 
   return (
     <SignUpStyled>
@@ -39,6 +41,8 @@ const SignUp = () => {
             if (user) {
               dispatch(setCurrentUser(
                 {...user.usuario,code: user.usuario.code }));
+                dispatch(setCurrentUser(null));
+              navigate("/login");
 
             }
           }}
@@ -65,7 +69,10 @@ const SignUp = () => {
               />
             </SignUpStyledContainer>
             <ButtonContainerStyle>
+              
+           
               <Submit>Registrarse</Submit>
+            
             </ButtonContainerStyle>
           </Form>
         </Formik>

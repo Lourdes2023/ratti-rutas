@@ -20,10 +20,9 @@ const Validate = () => {
   const dispatch = useDispatch();
   const currentUser = useSelector(state => state.user.currentUser);
 
+ 
   useEffect(() => {
-    if (!currentUser) {
-      navigate('/login');
-    } else if (currentUser.verified) {
+    if (currentUser && currentUser.verified) {
       navigate('/checkout');
     }
   }, [currentUser, navigate]);
