@@ -85,7 +85,7 @@ const CartModal = () => {
         <TitleStyled>
           <Submit
             onClick={() => {
-              navigate("/checkout");
+              navigate("/validate");
               dispatch(toggleHiddenCART());
             }}
           >

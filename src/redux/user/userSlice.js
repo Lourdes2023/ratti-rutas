@@ -16,6 +16,11 @@ const userSlice = createSlice({
         currentUser: action.payload,
       };
     },
+    setVerified: state => {
+      if (state.currentUser) {
+        state.currentUser.verified = true;
+      }
+    },
     toggleMenu: (state) => {
       return {
         ...state,
@@ -25,5 +30,5 @@ const userSlice = createSlice({
   },
 });
 
-export const { setCurrentUser, toggleMenu } = userSlice.actions;
+export const { setCurrentUser, toggleMenu,setVerified } = userSlice.actions;
 export default userSlice.reducer;

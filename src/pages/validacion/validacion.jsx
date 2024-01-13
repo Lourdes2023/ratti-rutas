@@ -3,22 +3,30 @@ import { Formik } from 'formik';
 import Submit from '../../components/UI/Submit/Submit';
 import { useNavigate } from 'react-router-dom';
 import { ValidateContainerStyled } from './ValidateStyles';
-import { useDispatch, useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 import { validateInitialValues } from '../../formik/initialValues';
 import { validateValidationSchema } from '../../formik/validationSchema';
 import Input from '../../components/UI/Input/Input';
 import { Form } from '../../components/Form/FormStyles';
 import { verifyUser } from '../../axios/axiosUser';
-
-
-
-
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setVerified } from '../../redux/user/userSlice';
 
 
 const Validate = () => {
+  const codeFromAPI = useSelector((state) => state.user.currentUser.code);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const codeFromAPI = useSelector((state) => state.user.currentUser.code);
+  const currentUser = useSelector(state => state.user.currentUser);
+
+  useEffect(() => {
+    if (!currentUser) {
+      navigate('/login');
+    } else if (currentUser.verified) {
+      navigate('/checkout');
+    }
+  }, [currentUser, navigate]);
 
 
   return (
@@ -28,13 +36,12 @@ const Validate = () => {
       <Formik
         initialValues={validateInitialValues}
         validationSchema={validateValidationSchema}
-        onSubmit={async (values) => {
-          const { email, code } = values; 
-          const response = await verifyUser(email, code); 
-          if (response) {
-            navigate('/');
-          }
+        onSubmit={async values => {
+          await verifyUser(currentUser.email, values.code);
+          dispatch(setVerified());
+          navigate('/checkout');
         }}
+
       >
         <Form>
           <Input

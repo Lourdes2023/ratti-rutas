@@ -20,7 +20,7 @@ import { useDispatch } from "react-redux";
 import useCheckAuth from "../../hooks/useRedirect";
 const SignUp = () => {
   const dispatch = useDispatch();
-  useCheckAuth("/Validate");
+  useCheckAuth('/login');
 
   return (
     <SignUpStyled>
@@ -50,7 +50,9 @@ const SignUp = () => {
               <p>Por favor, complete el siguiente formulario</p>
             </SignUptTitle>
             <SignUpStyledContainer>
-              <Input name="name" type="text" placeholder="Ingrese su nombre" />
+              <Input name="name"
+                     type="text"
+                     placeholder="Ingrese su nombre" />
               <Input
                 name="email"
                 type="email"

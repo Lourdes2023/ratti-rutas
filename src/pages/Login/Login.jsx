@@ -20,7 +20,7 @@ import { setCurrentUser } from "../../redux/user/userSlice";
 const Login = () => {
 
   const dispatch = useDispatch();
-  useCheckAuth("/");
+  useCheckAuth('/');
 
   
   return (
@@ -49,7 +49,7 @@ const Login = () => {
                 label="Correo electrónico"
                 type="email"
                 placeholder="Ingrese su correo electrónico"
-              />{" "}
+              />
               <Input
                 name="password"
                 label="Contraseña"
