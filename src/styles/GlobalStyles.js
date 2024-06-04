@@ -64,18 +64,4 @@ li {
     list-style: none;
  }
 
- footer {
-  background-color: var(--color-back-Header);
-  color: var(--color-Logo-text);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  width: 100%;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-top: 20px;
-  font-size: 1.2rem;
 `;

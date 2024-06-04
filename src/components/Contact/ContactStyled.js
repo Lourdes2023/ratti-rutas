@@ -24,7 +24,8 @@ export const InfoContainer = styled.div`
   justify-content: center;
   width: 80%;
   gap: 90px;
-  margin: 40px 40px;
+  margin: 40px ;
+  margin-top: 20px;
   p {
     font-size: 1.2rem;
     color: var(--color-text-contact);

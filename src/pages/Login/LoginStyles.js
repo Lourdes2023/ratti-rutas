@@ -8,7 +8,7 @@ export const TitleContainer = styled.div`
   & h2 {
     margin-bottom: 20px;
     text-align: center;
-    color: var(--color-primary-blue);
+    color: var(--color-primary-bordo);
   }
 `;
 export const LoginStyledContainer = styled.div`

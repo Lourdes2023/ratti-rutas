@@ -3,18 +3,17 @@ import { motion } from "framer-motion";
 
 export const ButtonStyle = styled(motion.button)`
   display: inline-block;
-  background: var(--color-buttonLogin-bg-hover);
+  background-image: var(--color-buttonLogin-bg-hover);
   border-radius: 18px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   font-size: 16px;
   text-align: center;
   padding: 14px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
   color: var(--color-button-text);
   font-weight: 600;
   &:hover {
-    background: var(--color-buttonLogin-bg);
+    background-image: var(--color-buttonLogin-bg);
     transform: scale(1.1);
   }
   @media (max-width: 980px) {
@@ -36,7 +35,7 @@ export const ButtonStylesCart = styled(motion.button)`
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-color);
-  border: 0.5px solid var(--color-primary-blue);
+  border: 0.5px solid white;
   margin: 10px;
   border-radius: 18px;
   text-align: center;
@@ -50,7 +49,7 @@ export const ButtonStylesCart = styled(motion.button)`
   transition: background-color 0.3s ease, transform 0.2s ease;
 
   &:hover {
-    background-color: var(--color-secondary-blue);
+    background-color: var(--primary-color);
   }
 
   &:disabled {

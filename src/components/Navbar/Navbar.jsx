@@ -12,6 +12,7 @@ import {
   UserNameStyles,
 } from "./NavbarStyles";
 import { useSelector } from "react-redux";
+import { color } from "framer-motion";
 
 
 const Navbar = () => {
@@ -71,8 +72,8 @@ const Navbar = () => {
               <p>{currentUser.nombre}</p>
             </UserNameStyles>
           ) : (
-            <Loginstyled to={"/login"}>
-              Login
+            <Loginstyled to={"/login"} >
+               Login
               <CiUser  size={18} color="green" />
             </Loginstyled>
           )}

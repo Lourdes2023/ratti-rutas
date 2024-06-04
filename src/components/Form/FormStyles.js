@@ -9,12 +9,15 @@ export const FormContainer = styled.div`
   padding: 1rem;
   width: 100%;
   height: 100%;
-  color: var(--color-text-dark);
-  background: var(--color-background);
-  border-radius: 0.5rem;
+  color: white;
+  & p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
   & span {
     margin-left: 1em;
-    color: var(--color-secondary-blue);
+    color: white;
   }
   @media (max-width: 980px) {
     width: 100%;

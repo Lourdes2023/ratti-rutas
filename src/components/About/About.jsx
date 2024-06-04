@@ -5,7 +5,6 @@ import {
   AboutSectionConten,
 } from "./AboutStyled";
 import Imagen4 from "../../assets/9.svg";
-import Imagen5 from "../../assets/2.svg";
 const About = () => {
   return (
     <AboutStylesContainer>

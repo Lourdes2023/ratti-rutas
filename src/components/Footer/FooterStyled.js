@@ -7,8 +7,7 @@ export const FooterContainerStyle = styled.footer`
   text-align: center;
   width: 100%;
   padding: 20px;
-  margin-top: 10vh;
-  background-color: var(--color-back-Header);
+  background-color:black;
 `;
 export const FooterContainer = styled.div`
   flex-direction: column;

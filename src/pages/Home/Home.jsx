@@ -16,19 +16,12 @@ const Home = () => {
       <HeroSeccionContainer>
         <Hero />
       </HeroSeccionContainer>
-      <hr />
       <AboutStyledContainer>
-        <h3>Sobre Nosotros</h3>
-        <hr />
         <About />
-        <br />
-        <h3>Nuestros Servicios</h3>
-        <hr />
         <Services />{" "}
       </AboutStyledContainer>
-      <hr />
+   
       <ContactStyledContainer>
-        <h3> Envianos tus consultas</h3>
         <Contact />
       </ContactStyledContainer>
     </HomeContainer>

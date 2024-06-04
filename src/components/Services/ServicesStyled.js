@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-export const ServicesContainer = styled.section`
+export const ServicesContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,10 +8,12 @@ export const ServicesContainer = styled.section`
   padding: 60px;
   width: 80%;
   margin-top: 15vh;
-
-  h1 {
+ background-color: var(--color-secondary-p);
+  h3 {
     font-size: 36px;
-    color: var(--color-button-text);
+    color: white;
+    background-color: var(--color-button-hoverCart);
+    padding: 10px 20px;
    
   }
   @media (max-width: 780px) {

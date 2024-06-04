@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const AboutStylesContainer = styled.section`
+export const AboutStylesContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,10 +53,11 @@ export const AboutSectionConten = styled.div`
     }
   }
   h2 {
-    color: var(--color-secondary-green);
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 10px;
+    font-size: 36px;
+    color: white;
+    border-radius: 10px;
+    background-color: var(--color-button-hoverCart);
+    padding: 10px 20px;
   }
   img {
     width: 80%;

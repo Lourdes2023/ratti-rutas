@@ -25,15 +25,7 @@ export const HeroSeccionContainer = styled(HomeContainer)``;
 export const AboutStyledContainer = styled(HomeContainer)`
   background-image: url(${ImageAbout});
   background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-  & h3 {
-    color: var(--color-button-hover);
-    background-color: var(--color-button-hoverCart);
-    width: 100%;
-  }
-
   @media (max-width: 980px) {
     justify-content: center;
     align-items: center;
