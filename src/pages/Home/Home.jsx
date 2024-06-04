@@ -19,18 +19,17 @@ const Home = () => {
       <hr />
       <AboutStyledContainer>
         <h3>Sobre Nosotros</h3>
-
+        <hr />
         <About />
-      </AboutStyledContainer>
-      <ServicesStylesContainer>
+        <br />
         <h3>Nuestros Servicios</h3>
+        <hr />
         <Services />{" "}
-      </ServicesStylesContainer>
-
+      </AboutStyledContainer>
+      <hr />
       <ContactStyledContainer>
-        <h3>Contacta a Nuestro Equipo</h3>
+        <h3> Envianos tus consultas</h3>
         <Contact />
-        <h3>Envianos tu Consulta</h3>
       </ContactStyledContainer>
     </HomeContainer>
   );

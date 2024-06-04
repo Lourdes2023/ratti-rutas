@@ -10,12 +10,10 @@ export const Products = () => {
     <>
       <CategoryStyledContainer>
         <h3>Seleccione Categoria</h3>
-        <Categorias />
-      </CategoryStyledContainer>
-      <ProductsStyledContainer>
-        <h3>Nuestros productos</h3>
+        <Categorias /> 
         <ProductsCard />
-      </ProductsStyledContainer>
+      </CategoryStyledContainer>
+     
     </>
   );
 };

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Button = ({ children, disabled = false }) => {
   return (
     <ButtonContainerStyle>
-      <ButtonStyle disabled={disabled}>
+      <ButtonStyle ttonStyle disabled={disabled}>
         <motion.div
           whileTap={{ scale: 1.1, transition: { duration: 0.2 } }}
           href="https://api.whatsapp.com/send?text=Buen%20día%20quisiera%20consultar%20sobre%20&amp;phone=5491140254010"
@@ -15,7 +15,7 @@ const Button = ({ children, disabled = false }) => {
         >
           <FiPhoneCall size={16} style={{ marginRight: "8px" }} />
           {children}
-        </motion.div>
+        </motion.div> 
       </ButtonStyle>
     </ButtonContainerStyle>
   );

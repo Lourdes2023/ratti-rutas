@@ -13,15 +13,16 @@ const Hero = () => {
       <HeroContainer>
         <Herotext>
           <h1>
-            DEJANOS CUIDARLO TODO <span>CONTACTANOS</span>
+            DEJANOS CUIDARLO TODO CONTACTANOS
           </h1>
 
           <p>
             Desde el primer momento en que nos llamas, nos encargamos de los
             trámites esenciales para dar inicio al servicio que corresponde.
-          </p>
+          </p> 
+          <Button>Llamar</Button>
         </Herotext>
-        <Button>LLAMANOS</Button>
+       
       </HeroContainer>
     </HeroSeccionContainer>
   );

@@ -27,22 +27,6 @@ const About = () => {
             <img src={Imagen4} alt="imagen4" style={{ borderRadius: "12px" }} />
           </div>
         </AboutSectionConten>
-
-        <AboutSectionConten>
-          <div className="AboutImage">
-            <img src={Imagen5} alt="imagen4" style={{ borderRadius: "12px" }} />
-          </div>
-          <div className="AboutText">
-            <h2>Misión</h2>
-            <p>
-              Nuestra misión es ayudar a que cada familia pueda despedirse de su
-              ser querido de una manera digna y respetuosa, al mismo tiempo que
-              les brindamos apoyo durante este difícil proceso. Sabemos que
-              nuestro trabajo es esencial para ayudar a las familias a superar
-              la pérdida y estamos orgullosos de poder hacerlo.
-            </p>
-          </div>
-        </AboutSectionConten>
       </AboutContainer>
     </AboutStylesContainer>
   );

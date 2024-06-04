@@ -7,7 +7,13 @@ export const ServicesContainer = styled.section`
   flex-direction: column;
   padding: 60px;
   width: 80%;
-  margin-top: 8vh;
+  margin-top: 15vh;
+
+  h1 {
+    font-size: 36px;
+    color: var(--color-button-text);
+   
+  }
   @media (max-width: 780px) {
     padding: 0;
   }
@@ -17,10 +23,9 @@ export const ServicesWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 40px;
   width: 80%;
-
+  margin-top: 30px;
   @media (min-width: 768px) {
     grid-template-columns: no-repeat(3, 1fr);
   }
@@ -61,7 +66,7 @@ export const ServiceDescription = styled.p`
 export const LinkIten = styled(Link)`
   padding: 5px 15px;
   border-radius: 15px;
-  background-color: #e6d3ba;
+  background-color: var(--color-button-hoverCart);
   transition: all 0.3s ease;
   :hover {
     background: crimson;

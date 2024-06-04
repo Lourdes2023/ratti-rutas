@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import imageContac from "../../assets/contact.svg";
-export const ContactContainer = styled.section`
+export const ContactContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin-top: 10vh;
+  margin-top: 18vh;
   border-radius: 12px;
-
   h2 {
     color: var(--color-darkgray-contact);
     font-size: 2.5rem;
@@ -23,8 +22,9 @@ export const ContactContainer = styled.section`
 export const InfoContainer = styled.div`
   display: flex;
   justify-content: center;
+  width: 80%;
   gap: 90px;
-  margin: 40px 0;
+  margin: 40px 40px;
   p {
     font-size: 1.2rem;
     color: var(--color-text-contact);
@@ -44,10 +44,11 @@ export const WhatsAppLink = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  width: 100%;
   height: 100%;
   border-radius: 5px;
   padding: 40px 0;
+  margin: 40px 0;
   background-image: url(${imageContac});
   background-position: center;
   background-size: cover;

@@ -6,6 +6,7 @@ export const ProductContainer = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-image: var(--color-title-Grad1);
   padding: 60px;
   width: 80%;
   margin: 0 auto;

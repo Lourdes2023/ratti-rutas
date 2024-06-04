@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import ImageAbout from "../../assets/fondoAbout.svg";
-
+import ImageAbout from "../../assets/fondogrisflor.png";
+import Image from "../../assets/fondogrisflor2.png";
 export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -28,21 +28,24 @@ export const AboutStyledContainer = styled(HomeContainer)`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  & h3 {
+    color: var(--color-button-hover);
+    background-color: var(--color-button-hoverCart);
+    width: 100%;
+  }
+
   @media (max-width: 980px) {
     justify-content: center;
     align-items: center;
     background-position: 100%;
     background-size: 100%;
-    & span {
-      margin-left: 0;
-      color: var(--color-back-body);
-    }
   }
 `;
 export const ServicesStylesContainer = styled(HomeContainer)`
   background-image: var(--color-back-Services);
+  margin-: 0;
 `;
 
 export const ContactStyledContainer = styled(HomeContainer)`
-  background-color: var(--color-back-About);
+  background-image:url(${Image});
 `;

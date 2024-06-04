@@ -3,24 +3,20 @@ import { motion } from "framer-motion";
 
 export const ButtonStyle = styled(motion.button)`
   display: inline-block;
-  background: var(--color-buttonEm-bg);
+  background: var(--color-buttonLogin-bg-hover);
   border-radius: 18px;
-  border: 0.5px solid var(--color-primary-blue);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   font-size: 16px;
   text-align: center;
-  padding: 18px;
+  padding: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  color: var(--color-secondary-green);
+  color: var(--color-button-text);
   font-weight: 600;
-
   &:hover {
-    background: var(--color-buttonEm-bg-hover);
-    color: var(--color-button-hover);
-    transform: scale(1.05);
+    background: var(--color-buttonLogin-bg);
+    transform: scale(1.1);
   }
-
   @media (max-width: 980px) {
     font-size: 18px;
     padding: 8px;

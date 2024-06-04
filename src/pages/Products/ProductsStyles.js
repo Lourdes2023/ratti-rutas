@@ -7,6 +7,7 @@ export const CategoryStyledContainer = styled.div`
   flex-direction: column;
   width: 100%;
   padding-bottom: 20px;
+  margin-top: 18vh;
   margin-bottom: 1px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   & h3 {
@@ -15,7 +16,7 @@ export const CategoryStyledContainer = styled.div`
     margin-top: 10vh;
     text-align: center;
     width: 50%;
-    color: #4a5568;
+    color:white;
     padding: 20px;
     @media (max-width: 780px) {
       font-size: 1.5rem;

@@ -30,6 +30,7 @@ export const AboutSectionConten = styled.div`
   flex-direction: row;
   align-items: center;
   padding: 50px;
+  margin-top: 50px;
   margin-bottom: 50px;
   text-align: right;
   gap: 20px;
