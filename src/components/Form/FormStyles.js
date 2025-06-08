@@ -10,15 +10,17 @@ export const FormContainer = styled.div`
   width: 45%;
   max-width: 500px;
   height: 100%;
-  color: white;
+  background-color: var(--color-crema-claro);
+  border: 1px solid var(--color-brown-earth);
+  color: var(--color-gris-piedra);
   & p {
-    color: white;
+    color: var(--color-gris-piedra);
     font-size: 1.2rem;
     margin-bottom: 1rem;
   }
   & span {
     margin-left: 1em;
-    color: white;
+    color: var(--color-gris-piedra);
   }
   @media (max-width: 768px) {
     width: 100%;
@@ -35,12 +37,12 @@ export const Form = styled(FormikForm)`
   padding: 40px 0px;
   margin-top: 5vh;
   width: 100%;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-brown-earth);
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   h2 {
     font-size: 2rem;
-    color: var(--color-primary-blue);
+    color: var(--color-bordo-profundo);
     margin-bottom: 20px;
     padding: 20px 10px;
     @media (max-width: 580px) {

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import imageContac from "../../assets/contact.svg";
 export const ContactContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -15,7 +14,7 @@ export const ContactContainer = styled.div`
     align-items: center;
   }
   h2 {
-    color: var(--color-darkgray-contact);
+    color: var(--color-bordo-profundo);
     font-size: 2.5rem;
     margin-bottom: 20px;
     padding: 20px;
@@ -35,7 +34,7 @@ export const InfoContainer = styled.div`
   margin: 0 1rem;
   p {
     font-size: 1.2rem;
-    color: var(--color-text-contact);
+    color: var(--color-gris-piedra);
     margin-bottom: 20px;
     line-height: 1.5;
   }
@@ -61,13 +60,13 @@ export const WhatsAppLink = styled.div`
   background-image: none;
   background-color: transparent;
   h1 {
-    color: #f1efd4;
+    color: var(--color-bordo-profundo);
     font-size: 1.5rem;
     margin: 20px 10px 20px 10px;
   }
   p {
     padding: 10px;
-    color: var(--color-text-contact);
+    color: var(--color-gris-piedra);
     font-size: 1rem;
   }
   @media (max-width: 980px) {
@@ -81,15 +80,15 @@ export const DataContactContainer = styled.div`
   margin-bottom: 1rem;
   background: transparent;
   p {
-    color: var(--color-darkgray-contact);
+    color: var(--color-gris-piedra);
     font-size: 1rem;
-    border-bottom: 0.5px solid var(--color-border-blue);
+    border-bottom: 0.5px solid var(--color-brown-earth);
   }
   a {
     margin-left: 10px;
-    color: var(--color-darkgray-contact);
+    color: var(--color-sage-green);
     &:hover {
-      color: var(--color-contact-hover);
+      color: var(--color-bordo-profundo);
     }
   }
 `;

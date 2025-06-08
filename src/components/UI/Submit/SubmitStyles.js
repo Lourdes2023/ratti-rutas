@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const SubmitButton = styled(motion.button)`
-  background: var(--color-buttonLogin-bg-hover);
-  color: white;
+  background: var(--color-bordo-profundo);
+  color: var(--color-crema-claro);
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
@@ -13,6 +13,6 @@ export const SubmitButton = styled(motion.button)`
   transition: background-color 0.3s ease;
   margin-bottom: 40px;
   &:hover {
-    background: var(--color-buttonLogin-bg);
+    background: var(--color-sage-green);
   }
 `;

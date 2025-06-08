@@ -4,7 +4,7 @@ export const TextAreaContainer = styled.div`
   width: 80%;
   padding: 20px;
   margin-bottom: 30px;
-  background: var(--color-buttonLogin-bg);
+  background: transparent;
   border-radius: 20px;
   resize: vertical;
 `;
@@ -17,7 +17,15 @@ export const ErrorMessageStyled = styled.p`
 export const TextAreaStyles = styled.textarea`
   width: 80%;
   padding: 20px;
-  border: 1px solid var(---color-primary-blue);
+  border: 1px solid var(--color-brown-earth);
   border-radius: 20px;
   resize: vertical;
+  background-color: var(--color-crema-claro);
+  color: var(--color-bordo-profundo);
+  &::placeholder {
+    color: var(--color-gris-piedra);
+  }
+  &:focus {
+    border-color: var(--color-sage-green);
+  }
 `;
