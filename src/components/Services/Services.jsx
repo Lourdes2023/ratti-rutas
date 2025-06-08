@@ -24,7 +24,7 @@ const Services = () => {
 
   return (
     <ServicesContainer>
-      <h3>Nuetros servicios</h3>
+      <h3>Nuestros servicios</h3>
       <ServicesWrapper>
         <ButtonCart onClick={handlePrev}>Anterior</ButtonCart>
         <AnimatePresence mode="wait">
