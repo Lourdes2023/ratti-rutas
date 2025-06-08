@@ -23,7 +23,7 @@ const Product = ({ id, title, price, img, desc }) => {
         <ButtonCart
           onClick={() => dispatch(addtocart({ id, title, price, img, desc }))}
         >
-          Agregar
+          Comprar
         </ButtonCart>
       </ProductContent>
     </ProductWrapper>
