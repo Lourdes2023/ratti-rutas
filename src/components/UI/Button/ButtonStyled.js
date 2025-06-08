@@ -27,6 +27,7 @@ export const ButtonContainerStyle = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  gap: 20px;
   cursor: pointer;
 `;
 
@@ -36,7 +37,7 @@ export const ButtonStylesCart = styled(motion.button)`
   align-items: center;
   background-color: var(--color-bordo-profundo);
   border: 1px solid var(--color-brown-earth);
-  margin: 10px;
+  margin: 0;
   border-radius: 18px;
   text-align: center;
   padding: 18px;

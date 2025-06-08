@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { ButtonStylesCart } from "../UI/Button/ButtonStyled";
 
 export const ProductContainer = styled.section`
   display: flex;
@@ -29,17 +30,18 @@ export const ProductWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
-  margin-bottom: 20px;
+  gap: 60px;
+  margin-bottom: 40px;
 `;
 
 export const ProductContent = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   width: 240px;
-  height: 340px;
+  min-height: 360px;
   padding: 20px;
   border-radius: 12px;
   background-color: var(--color-crema-claro);
@@ -68,4 +70,8 @@ export const ProductTitle = styled.h4`
 export const ProductDescription = styled.p`
   font-size: 14px;
   color: var(--color-gris-piedra);
+`;
+
+export const ProductButton = styled(ButtonStylesCart)`
+  margin-top: auto;
 `;
