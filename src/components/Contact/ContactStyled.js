@@ -62,7 +62,7 @@ export const WhatsAppLink = styled.div`
   background-image: none;
   background-color: transparent;
   h1 {
-    color: var(--color-bordo-profundo);
+    color: var(--color-crema-claro);
     font-size: 1.5rem;
     margin: 20px 10px 20px 10px;
   }
