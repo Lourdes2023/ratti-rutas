@@ -54,7 +54,7 @@ const Felicitaciones = () => {
 
   return (
     <Container>
-      <Title> Felicitaciones ha realizado una compra exitosa!</Title>
+      <Title>¡Compra exitosa!</Title>
       <Container
         className="box"
         animate={{
@@ -73,7 +73,7 @@ const Felicitaciones = () => {
         <PiFlowerThin size={70} color=" #219ebc " />
       </Container>
 
-      <Text>Gracias por confiar en Ratti!</Text>
+      <Text>Gracias por confiar en Ratti. Serás redirigido a tus órdenes.</Text>
     </Container>
   );
 };

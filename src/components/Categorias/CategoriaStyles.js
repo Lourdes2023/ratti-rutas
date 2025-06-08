@@ -1,38 +1,29 @@
 import styled from "styled-components";
-export const CategoryContainer = styled.div`
+export const CategoryItem = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-`;
-export const CategoryWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  width: 50%;
-  padding: 20px;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
 `;
 
-export const CategoryConten = styled.div`
+export const CategoryCard = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   background: var(--color-Categories);
-  border-radius: 10px;
-  padding: 20px;
-  border: 1px solid white;
-  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #fff;
 `;
 export const CategoryImage = styled.img`
   width: 80%;
-  max-height: 150px;
+  max-height: 120px;
   object-fit: cover;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 `;
 export const CategoryTitle = styled.p`
-  font-size: 18px;
+  font-size: 0.9rem;
   color: var(--color-text-contact);
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 `;

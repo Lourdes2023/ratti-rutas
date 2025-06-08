@@ -1,34 +1,17 @@
 import styled from "styled-components";
 
-export const CategoryStyledContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+export const ProductsPageContainer = styled.div`
   width: 100%;
-  padding-bottom: 20px;
-  margin-top: 18vh;
-  margin-bottom: 1px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10vh;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   & h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-top: 10vh;
-    text-align: center;
-    width: 50%;
-    color:white;
-    padding: 20px;
-    @media (max-width: 780px) {
-      font-size: 1.5rem;
-    }
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0;
   }
 `;
 
-export const ProductsStyledContainer = styled(CategoryStyledContainer)`
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  & h3 {
-    padding-top: 20px;
-    margin-top: 0;
-    color: #4a5568;
-  }
-`;

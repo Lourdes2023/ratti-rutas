@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { ProductContainer, ProductWrapper } from "./ProductCardsStyles";
-import Product from "./Product";
+import { ProductsSection, CardGrid } from "./ProductStyles";
+import ProductCard from "./ProductCard";
 import ButtonCart from "../UI/Button/ButtonCart";
 import { ButtonContainerStyle } from "../UI/Button/ButtonStyled";
 import { LIMITE_INICIAL } from "../../utilidades/constants";
 
-const ProductsCard = () => {
+const ProductGrid = () => {
   const [limit, setlimit] = useState(LIMITE_INICIAL);
   let products = useSelector((state) => state.products.products);
   const { selectedCategory } = useSelector((state) => state.categorias);
@@ -23,18 +23,18 @@ const ProductsCard = () => {
   console.log("limit:", limit);
   return (
     <>
-      <ProductContainer>
-        <ProductWrapper>
+      <ProductsSection>
+        <CardGrid>
           {Object.entries(products).map(([, flowers]) => {
             return flowers.map((flower) => {
               if (limit >= flower.id || selectedCategory) {
-                return <Product {...flower} key={flower.id} />;
+                return <ProductCard {...flower} key={flower.id} />;
               }
               return null;
             });
           })}
-        </ProductWrapper>
-      </ProductContainer>
+        </CardGrid>
+      </ProductsSection>
       {!selectedCategory && (
         <ButtonContainerStyle>
           <ButtonCart
@@ -55,4 +55,4 @@ const ProductsCard = () => {
   );
 };
 
-export default ProductsCard;
+export default ProductGrid;
