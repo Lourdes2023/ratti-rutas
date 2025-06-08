@@ -2,9 +2,9 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 :root {
- --color-back-body: #f8f9fa;
---color-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
---color-back-Header: linear-gradient(to right, #f8f9fa, #999999);
+ --color-back-body: #f8f5f1;
+ --color-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+ --color-back-Header: #f8f5f1;
 --color-Logo-text: #5a1a1a;
 --color-title-Grad1: linear-gradient(25deg, #999999,#666666);
 --primary-color: #800000;
@@ -42,15 +42,19 @@ export const GlobalStyles = createGlobalStyle`
 }
 /* Estilos generales */
 body {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
   background: var(--color-back-body);
   overflow-x: hidden;
-  
+
 }
 html {
   scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
 }
 
 a {

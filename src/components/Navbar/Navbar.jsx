@@ -12,7 +12,6 @@ import {
   UserNameStyles,
 } from "./NavbarStyles";
 import { useSelector } from "react-redux";
-import { color } from "framer-motion";
 
 
 const Navbar = () => {
