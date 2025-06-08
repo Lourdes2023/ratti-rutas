@@ -8,6 +8,8 @@ export const ContactContainer = styled.div`
   width: 100%;
   margin-top: 18vh;
   padding: 2rem 0;
+  background: var(--color-brown-earth);
+  color: var(--color-crema-claro);
   border-radius: 12px;
   @media (max-width: 768px) {
     flex-direction: column;
@@ -34,7 +36,7 @@ export const InfoContainer = styled.div`
   margin: 0 1rem;
   p {
     font-size: 1.2rem;
-    color: var(--color-gris-piedra);
+    color: var(--color-crema-claro);
     margin-bottom: 20px;
     line-height: 1.5;
   }
@@ -66,7 +68,7 @@ export const WhatsAppLink = styled.div`
   }
   p {
     padding: 10px;
-    color: var(--color-gris-piedra);
+    color: var(--color-crema-claro);
     font-size: 1rem;
   }
   @media (max-width: 980px) {
