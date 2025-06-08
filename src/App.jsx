@@ -1,17 +1,8 @@
-import Routes from "./Routes/Routes";
-import Footer from "./components/Footer/Footer";
-import Layout from "./components/Layout/Layout";
-import Navbar from "./components/Navbar/Navbar";
+import FuneralApp from "./funeral/FuneralApp";
 
 function App() {
   return (
-    <>
-      <Layout>
-        <Navbar />
-        <Routes />
-        <Footer />
-      </Layout>
-    </>
+    <FuneralApp />
   );
 }
 
