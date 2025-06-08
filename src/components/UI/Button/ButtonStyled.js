@@ -27,6 +27,7 @@ export const ButtonContainerStyle = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  gap: 20px;
   cursor: pointer;
 `;
 
@@ -34,22 +35,22 @@ export const ButtonStylesCart = styled(motion.button)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--secondary-color);
-  border: 0.5px solid white;
-  margin: 10px;
+  background-color: var(--color-bordo-profundo);
+  border: 1px solid var(--color-brown-earth);
+  margin: 0;
   border-radius: 18px;
   text-align: center;
   padding: 18px;
   height: 40px;
   width: 120px;
-  color: var(--color-button-text);
+  color: var(--color-crema-claro);
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 
   &:hover {
-    background-color: var(--primary-color);
+    background-color: var(--color-sage-green);
   }
 
   &:disabled {

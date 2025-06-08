@@ -6,10 +6,10 @@ import {
   ProductImage,
   ProductTitle,
   ProductWrapper,
+  ProductButton,
 } from "./ProductCardsStyles";
 import { useDispatch } from "react-redux";
 import { addtocart } from "../../redux/cart/Slice.Cart";
-import ButtonCart from "../UI/Button/ButtonCart";
 
 const Product = ({ id, title, price, img, desc }) => {
   const dispatch = useDispatch();
@@ -20,11 +20,11 @@ const Product = ({ id, title, price, img, desc }) => {
         <ProductImage src={img} alt={title} />
         <ProductTitle>{title}</ProductTitle>
         <ProductTitle>{price}</ProductTitle>
-        <ButtonCart
+        <ProductButton
           onClick={() => dispatch(addtocart({ id, title, price, img, desc }))}
         >
-          Agregar
-        </ButtonCart>
+          Comprar
+        </ProductButton>
       </ProductContent>
     </ProductWrapper>
   );

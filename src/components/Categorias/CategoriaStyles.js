@@ -4,6 +4,7 @@ export const CategoryContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
+  cursor: pointer;
 `;
 export const CategoryWrapper = styled.div`
   display: flex;
@@ -19,11 +20,17 @@ export const CategoryConten = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: var(--color-Categories);
+  background: var(--color-crema-claro);
   border-radius: 10px;
   padding: 20px;
-  border: 1px solid white;
+  border: 1px solid var(--color-brown-earth);
   width: 100%;
+  box-shadow: var(--color-shadow);
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: var(--color-sage-green);
+  }
 `;
 export const CategoryImage = styled.img`
   width: 80%;
@@ -33,6 +40,6 @@ export const CategoryImage = styled.img`
 `;
 export const CategoryTitle = styled.p`
   font-size: 18px;
-  color: var(--color-text-contact);
+  color: var(--color-bordo-profundo);
   margin-bottom: 10px;
 `;
