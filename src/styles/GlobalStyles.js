@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 :root {
- --color-back-body: #f8f5f1;
+ --color-back-body: #e8f5e9;
  --color-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
  --color-back-Header: #f8f5f1;
 --color-Logo-text: #5a1a1a;
