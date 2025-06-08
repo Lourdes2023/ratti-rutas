@@ -2,8 +2,8 @@ import { useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Header from './components/Header';
 import FlowerCatalog from './components/FlowerCatalog';
-import Cart from './components/Cart';
 import Footer from './components/Footer';
+import CartModal from './components/CartModal';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -48,6 +48,7 @@ const Message = styled.div`
 export default function FuneralApp() {
   const [cart, setCart] = useState([]);
   const [showMsg, setShowMsg] = useState(false);
+  const [showCart, setShowCart] = useState(false);
 
   const addToCart = (flower) => {
     setCart([...cart, flower]);
@@ -59,10 +60,13 @@ export default function FuneralApp() {
     setCart(cart.filter((_, i) => i !== index));
   };
 
+  const openCart = () => setShowCart(true);
+  const closeCart = () => setShowCart(false);
+
   return (
     <PageContainer>
       <GlobalStyle />
-      <Header cartCount={cart.length} />
+      <Header cartCount={cart.length} onCartClick={openCart} />
       <Main>
         <Section id="inicio">
           <p style={{ textAlign: 'center', fontFamily: 'Playfair Display, serif', color: '#6f4e37' }}>
@@ -80,13 +84,12 @@ export default function FuneralApp() {
           <h2 style={{ fontFamily: 'Playfair Display, serif', color: '#6f4e37' }}>Servicios</h2>
           <p>Ofrecemos organización integral, asesoría y acompañamiento.</p>
         </Section>
-        <Section id="carrito">
-          <h2 style={{ fontFamily: 'Playfair Display, serif', color: '#6f4e37' }}>Tu carrito</h2>
-          <Cart items={cart} onRemove={removeFromCart} />
-        </Section>
       </Main>
       <Footer />
       <Message show={showMsg}>Tu gesto ha sido registrado con amor</Message>
+      {showCart && (
+        <CartModal items={cart} onClose={closeCart} onRemove={removeFromCart} />
+      )}
     </PageContainer>
   );
 }

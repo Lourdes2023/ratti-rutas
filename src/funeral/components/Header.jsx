@@ -20,10 +20,14 @@ const Nav = styled.nav`
   display: flex;
   gap: 1rem;
 
-  a {
+  a,
+  button {
     color: #497d75;
     text-decoration: none;
     font-family: 'Lato', sans-serif;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 `;
 
@@ -35,7 +39,7 @@ const CartCount = styled.span`
   font-size: 0.8rem;
 `;
 
-export default function Header({ cartCount }) {
+export default function Header({ cartCount, onCartClick }) {
   return (
     <HeaderContainer>
       <Logo>Funeraria Serenidad</Logo>
@@ -44,7 +48,7 @@ export default function Header({ cartCount }) {
         <a href="#nosotros">Nosotros</a>
         <a href="#catalogo">Catálogo</a>
         <a href="#servicios">Servicios</a>
-        <a href="#carrito">Carrito</a>
+        <button onClick={onCartClick}>Carrito</button>
         <CartCount>{cartCount}</CartCount>
       </Nav>
     </HeaderContainer>
