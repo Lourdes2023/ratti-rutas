@@ -1,84 +1,57 @@
 import styled from "styled-components";
-import ImgHero from "../../assets/HeroImg2.svg";
+import BgHero from "../../assets/portada.svg";
+
 export const HeroSeccionContainer = styled.section`
   display: flex;
-  justify-content:center;
-  align-items: center;
   flex-direction: column;
-  width: 90%;
-  padding: 60px;
-  margin-top: 15vh;
-  @media (max-width: 1024px) {
-    margin-top: 10vh;
-  }
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 1rem;
+  width: 100%;
+  background-color: var(--color-back-body);
+  background-image: url(${BgHero});
+  background-size: cover;
+  background-position: center;
 `;
 
 export const HeroContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 50%;
-  margin-top: 20px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
 `;
 
 export const Herotext = styled.div`
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  padding: 20px;
-  border-radius: 10px;
-  background: var(--background-color);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  @media (max-width: 1024px) {
-    border-radius: 18px;
-  
-  }
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
 
   & h1 {
+    margin: 0 0 1rem;
     font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1.5;
-    text-align: center;
-    padding: 1rem;
     color: var(--color-text-hero);
-    @media (max-width: 1024px) {
-      font-size: 1.8rem;
-      font-weight: 600;
-    }
   }
 
   & p {
-    color: var(--color-text-dark); /* Color de texto personalizado */
-    font-size: 18px;
+    margin-bottom: 2rem;
+    color: var(--color-text-dark);
+    font-size: 1.125rem;
     font-weight: 300;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    padding: 1rem;
-    @media (max-width: 980px) {
-      font-size: 1.2rem;
-      font-weight: 300;
-      border-radius: 10px;
-    }
   }
 `;
 
-export const Heroimg = styled.div`
-  width: 100%;
-  height: 100%;
+export const HeroButton = styled.a`
+  display: inline-block;
+  background-color: #5b1f29;
+  color: #f8f5f1;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 
-  @media (max-width: 980px) {
-    width: 90%;
-    margin-bottom: 20px;
-  }
-
-  & img {
-    width: 100%;
-    height: 100%;
-    @media (max-width: 980px) {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-    }
+  &:hover {
+    background-color: #6f4e37;
   }
 `;

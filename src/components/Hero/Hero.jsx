@@ -3,24 +3,23 @@ import {
   HeroSeccionContainer,
   Herotext,
   HeroContainer,
-  // Heroimg,
+  HeroButton,
 } from "./HeroStyled";
-import Button from "../UI/Button/Button";
+import { Link } from "react-router-dom";
 // import ImgHero from "../../assets/HeroImg2.svg";
 const Hero = () => {
   return (
     <HeroSeccionContainer>
       <HeroContainer>
         <Herotext>
-          <h1>
-            DEJANOS CUIDARLO TODO CONTACTANOS
-          </h1>
-
+          <h1>Acompañamos con respeto y calidez en cada despedida</h1>
           <p>
-            Desde el primer momento en que nos llamas, nos encargamos de los
-            trámites esenciales para dar inicio al servicio que corresponde.
-          </p> 
-          <Button>Llamar</Button>
+            Brindamos orientación y apoyo para que puedas enfocarte en honrar
+            la memoria de tus seres queridos.
+          </p>
+          <HeroButton as={Link} to="/Services">
+            Conocer nuestros servicios
+          </HeroButton>
         </Herotext>
        
       </HeroContainer>

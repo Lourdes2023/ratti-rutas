@@ -29,8 +29,8 @@ export const GlobalStyles = createGlobalStyle`
 --color--back-category: linear-gradient(to right, #999999, #f8f9fa);
 --color-back-About: linear-gradient(24deg, #f8f9fa, #cccccc);
 --color-back-Services: linear-gradient(45deg, #999999, #f8f9fa);
---color-text-hero: #800000;
---color-text-dark: #505854;
+ --color-text-hero: #5b1f29;
+ --color-text-dark: #8d8d8d;
 --color-button-text: #ffffff;
 --color-button-hover: #f8f9fa;
 --color-button-hoverCart: #5a1a1a;
