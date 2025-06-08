@@ -23,10 +23,10 @@ const Navbar = () => {
   return (
     <NavbarContainerStyled>
       <NavbarLinkContainer>
-      <LogoContainer>
-        <img src={Logo} alt="Logo" />
-      </LogoContainer>{" "}
-      <MenuLinkContainer >
+        <LogoContainer>
+          <img src={Logo} alt="Logo" />
+        </LogoContainer>
+        <MenuLinkContainer>
        
           <MenuLink
             to={"/"}
@@ -64,20 +64,20 @@ const Navbar = () => {
           </MenuLink>
         
        
-      </MenuLinkContainer>
-      </NavbarLinkContainer>
-       <LoginContainer>
+        </MenuLinkContainer>
+        <LoginContainer>
           {currentUser ? (
             <UserNameStyles>
               <p>{currentUser.nombre}</p>
             </UserNameStyles>
           ) : (
-            <Loginstyled to={"/login"} >
-               Login
-              <CiUser  size={18} color="green" />
+            <Loginstyled to={"/login"}>
+              Login
+              <CiUser size={18} color="green" />
             </Loginstyled>
           )}
         </LoginContainer>
+      </NavbarLinkContainer>
     </NavbarContainerStyled>
   );
 };

@@ -2,38 +2,31 @@ import styled from "styled-components";
 import { NavLink, Link } from "react-router-dom";
 
 export const NavbarContainerStyled = styled.header`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 2;
- 
+  z-index: 10;
+  background-image: var(--color-back-Header);
+  box-shadow: var(--color-shadow);
 `;
 
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
   & img {
-    width: 50px;
+    width: 60px;
   }
-
 `;
 
 export const NavbarLinkContainer = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction : column;
-  background-image: var(--color-back-Header);
-  width: 100%;
-  max-width: 800px;
-  margin-top: 1rem;
-  padding: 1rem;
-  border-radius: 10px;
+  padding: 0.5rem 1rem;
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 1rem;
@@ -42,8 +35,8 @@ export const NavbarLinkContainer = styled.div`
 
 export const MenuLinkContainer = styled.nav`
   display: flex;
+  align-items: center;
   gap: 2rem;
-  margin-top: 1rem;
 `;
 
 
@@ -65,23 +58,7 @@ export const MenuLink = styled(NavLink)`
 export const LoginContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center; 
-  flex-direction: column;
-  gap: 21px;
-  border-radius: 10px;
-  background-color: ;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  & h3 {
-    color: #333;
-  }
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 1rem;
-  }
+  gap: 1rem;
 `;
 
 export const Loginstyled = styled(Link)`
