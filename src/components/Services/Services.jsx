@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import ButtonCart from "../UI/Button/ButtonCart";
+import React from "react";
+import { motion } from "framer-motion";
 import {
   ServicesContainer,
   ServicesWrapper,
@@ -12,37 +11,25 @@ import {
 import { ServicesData } from "../../data/DataServices";
 
 const Services = () => {
-  const [index, setIndex] = useState(0);
-
-  const handleNext = () => {
-    setIndex((prevIndex) => (prevIndex + 1) % ServicesData.length);
-  };
-
-  const handlePrev = () => {
-    setIndex((prevIndex) => (prevIndex - 1 + ServicesData.length) % ServicesData.length);
-  };
-
   return (
     <ServicesContainer>
       <h3>Nuestros servicios</h3>
       <ServicesWrapper>
-        <ButtonCart onClick={handlePrev}>Anterior</ButtonCart>
-        <AnimatePresence mode="wait">
+        {ServicesData.map((service) => (
           <motion.div
-            key={ServicesData[index].id}
-            initial={{ opacity: 0, y: 200 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 200 }}
-            transition={{ duration: 0.2 }}
+            key={service.id}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.4 }}
           >
             <Service>
-              <ServiceImage src={ServicesData[index].imageUrl} alt={ServicesData[index].title} />
-              <ServiceTitle>{ServicesData[index].title}</ServiceTitle>
-              <LinkIten to={`/Services/${ServicesData[index].title}`}>Ver más</LinkIten>
+              <ServiceImage src={service.imageUrl} alt={service.title} />
+              <ServiceTitle>{service.title}</ServiceTitle>
+              <LinkIten to={`/Services/${service.title}`}>Ver más</LinkIten>
             </Service>
           </motion.div>
-        </AnimatePresence>
-        <ButtonCart onClick={handleNext}>Siguiente</ButtonCart>
+        ))}
       </ServicesWrapper>
     </ServicesContainer>
   );

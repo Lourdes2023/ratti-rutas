@@ -25,12 +25,10 @@ export const ServicesWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 40px;
-  width: 80%;
+  width: 100%;
   margin-top: 30px;
-  @media (min-width: 768px) {
-    grid-template-columns: no-repeat(3, 1fr);
-  }
 `;
 
 export const Service = styled.div`
