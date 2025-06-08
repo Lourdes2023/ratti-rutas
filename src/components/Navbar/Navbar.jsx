@@ -12,7 +12,6 @@ import {
   UserNameStyles,
 } from "./NavbarStyles";
 import { useSelector } from "react-redux";
-import { color } from "framer-motion";
 
 
 const Navbar = () => {
@@ -23,10 +22,10 @@ const Navbar = () => {
   return (
     <NavbarContainerStyled>
       <NavbarLinkContainer>
-      <LogoContainer>
-        <img src={Logo} alt="Logo" />
-      </LogoContainer>{" "}
-      <MenuLinkContainer >
+        <LogoContainer>
+          <img src={Logo} alt="Logo" />
+        </LogoContainer>
+        <MenuLinkContainer>
        
           <MenuLink
             to={"/"}
@@ -50,8 +49,8 @@ const Navbar = () => {
           </MenuLink>
         
           <MenuLink
-            to={"/Contact"}
-            className={location.pathname === "/Contact" ? "active" : ""}
+            to={"/contact"}
+            className={location.pathname === "/contact" ? "active" : ""}
           >
            Contacto
           </MenuLink>
@@ -64,20 +63,20 @@ const Navbar = () => {
           </MenuLink>
         
        
-      </MenuLinkContainer>
-      </NavbarLinkContainer>
-       <LoginContainer>
+        </MenuLinkContainer>
+        <LoginContainer>
           {currentUser ? (
             <UserNameStyles>
               <p>{currentUser.nombre}</p>
             </UserNameStyles>
           ) : (
-            <Loginstyled to={"/login"} >
-               Login
-              <CiUser  size={18} color="green" />
+            <Loginstyled to={"/login"}>
+              Login
+              <CiUser size={18} color="green" />
             </Loginstyled>
           )}
         </LoginContainer>
+      </NavbarLinkContainer>
     </NavbarContainerStyled>
   );
 };

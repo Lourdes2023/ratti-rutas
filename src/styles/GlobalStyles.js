@@ -2,9 +2,9 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 :root {
- --color-back-body: #f8f9fa;
---color-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
---color-back-Header: linear-gradient(to right, #f8f9fa, #999999);
+ --color-back-body: #f8f5f1;
+ --color-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+ --color-back-Header: #f8f5f1;
 --color-Logo-text: #5a1a1a;
 --color-title-Grad1: linear-gradient(25deg, #999999,#666666);
 --primary-color: #800000;
@@ -29,8 +29,8 @@ export const GlobalStyles = createGlobalStyle`
 --color--back-category: linear-gradient(to right, #999999, #f8f9fa);
 --color-back-About: linear-gradient(24deg, #f8f9fa, #cccccc);
 --color-back-Services: linear-gradient(45deg, #999999, #f8f9fa);
---color-text-hero: #800000;
---color-text-dark: #505854;
+ --color-text-hero: #5b1f29;
+ --color-text-dark: #8d8d8d;
 --color-button-text: #ffffff;
 --color-button-hover: #f8f9fa;
 --color-button-hoverCart: #5a1a1a;
@@ -42,23 +42,27 @@ export const GlobalStyles = createGlobalStyle`
 }
 /* Estilos generales */
 body {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
   background: var(--color-back-body);
   overflow-x: hidden;
-  
+
 }
 html {
   scroll-behavior: smooth;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
+
 a {
     text-decoration: none;
-    color:white ;
+    color: #8d8d8d;
 }
 a:visited {
-    color: white;
+    color: #8d8d8d;
 }
 li {
     list-style: none;
