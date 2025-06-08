@@ -9,6 +9,7 @@ export const CategoryStyledContainer = styled.div`
   padding-bottom: 20px;
   margin-top: 18vh;
   margin-bottom: 1px;
+  background: var(--color-crema-claro);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   & h3 {
     font-size: 2rem;
@@ -16,7 +17,7 @@ export const CategoryStyledContainer = styled.div`
     margin-top: 10vh;
     text-align: center;
     width: 50%;
-    color:white;
+    color: var(--color-bordo-profundo);
     padding: 20px;
     @media (max-width: 780px) {
       font-size: 1.5rem;
@@ -29,6 +30,6 @@ export const ProductsStyledContainer = styled(CategoryStyledContainer)`
   & h3 {
     padding-top: 20px;
     margin-top: 0;
-    color: #4a5568;
+    color: var(--color-brown-earth);
   }
 `;

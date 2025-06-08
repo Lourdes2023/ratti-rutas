@@ -18,9 +18,11 @@ const Categoria = ({ img, category }) => {
         selected={category === selectedCategory}
         onClick={() => dispatch(selectCategorias(category))}
       >
-        <CategoryConten>
+        <CategoryConten selected={category === selectedCategory}>
           <CategoryImage src={img} alt={category} />
-          <CategoryTitle>{category}</CategoryTitle>
+          <CategoryTitle selected={category === selectedCategory}>
+            {category}
+          </CategoryTitle>
         </CategoryConten>
       </CategoryContainer>
     </motion.div>

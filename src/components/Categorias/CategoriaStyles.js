@@ -4,6 +4,11 @@ export const CategoryContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-4px);
+  }
 `;
 export const CategoryWrapper = styled.div`
   display: flex;
@@ -19,11 +24,16 @@ export const CategoryConten = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: var(--color-Categories);
+  background: ${({ selected }) =>
+    selected ? 'var(--color-sage-green)' : 'var(--color-crema-claro)'};
   border-radius: 10px;
   padding: 20px;
-  border: 1px solid white;
+  border: 2px solid
+    ${({ selected }) =>
+      selected ? 'var(--color-bordo-profundo)' : 'var(--color-brown-earth)'};
+  box-shadow: var(--color-shadow);
   width: 100%;
+  transition: background 0.3s ease, border 0.3s ease;
 `;
 export const CategoryImage = styled.img`
   width: 80%;
@@ -33,6 +43,7 @@ export const CategoryImage = styled.img`
 `;
 export const CategoryTitle = styled.p`
   font-size: 18px;
-  color: var(--color-text-contact);
+  color: ${({ selected }) =>
+    selected ? 'var(--color-crema-claro)' : 'var(--color-bordo-profundo)'};
   margin-bottom: 10px;
 `;
