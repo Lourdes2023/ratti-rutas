@@ -28,7 +28,7 @@ export const GlobalStyles = createGlobalStyle`
 --color-backg-contact: #666666;
 --color--back-category: linear-gradient(to right, #999999, #f8f9fa);
 --color-back-About: linear-gradient(24deg, #f8f9fa, #cccccc);
---color-back-Services: linear-gradient(45deg, #999999, #f8f9fa);
+ --color-back-Services: linear-gradient(135deg, #faf5ef, #e9e2d0);
  --color-text-hero: #5b1f29;
  --color-text-dark: #8d8d8d;
 --color-button-text: #ffffff;

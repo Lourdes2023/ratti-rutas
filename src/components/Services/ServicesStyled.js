@@ -8,13 +8,13 @@ export const ServicesContainer = styled.div`
   padding: 60px;
   width: 80%;
   margin-top: 15vh;
- background-color: var(--color-secondary-p);
+  background: var(--color-back-Services);
+  border-radius: 12px;
+  box-shadow: var(--box-shadow-color);
   h3 {
     font-size: 36px;
-    color: white;
-    background-color: var(--color-button-hoverCart);
+    color: var(--color-Logo-text);
     padding: 10px 20px;
-   
   }
   @media (max-width: 780px) {
     padding: 0;
@@ -25,12 +25,10 @@ export const ServicesWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 40px;
-  width: 80%;
+  width: 100%;
   margin-top: 30px;
-  @media (min-width: 768px) {
-    grid-template-columns: no-repeat(3, 1fr);
-  }
 `;
 
 export const Service = styled.div`
@@ -40,16 +38,21 @@ export const Service = styled.div`
   text-align: center;
   width: 290px;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #fff;
+  border-radius: 12px;
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover-color);
+  }
   @media (max-width: 780px) {
     width: 250px;
   }
 `;
 
 export const ServiceImage = styled.img`
-  width: 240px;
+  width: 100%;
   max-height: 150px;
   object-fit: cover;
   margin-bottom: 10px;
@@ -57,7 +60,7 @@ export const ServiceImage = styled.img`
 
 export const ServiceTitle = styled.h4`
   font-size: 18px;
-  color: var(--color-secondary);
+  color: var(--color-Logo-text);
   margin-bottom: 10px;
 `;
 
@@ -69,8 +72,9 @@ export const LinkIten = styled(Link)`
   padding: 5px 15px;
   border-radius: 15px;
   background-color: var(--color-button-hoverCart);
+  color: var(--color-button-text);
   transition: all 0.3s ease;
-  :hover {
-    background: crimson;
+  &:hover {
+    background-color: var(--color-primary-bordo);
   }
 `;
