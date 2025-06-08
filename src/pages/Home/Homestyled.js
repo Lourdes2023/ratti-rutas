@@ -1,12 +1,17 @@
 import styled from "styled-components";
-import ImageAbout from "../../assets/fondogrisflor.png";
-import Image from "../../assets/fondogrisflor2.png";
+import ImageAbout from "../../assets/fondoHero.png";
+
 export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  background-image: url(${ImageAbout});
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
   & h3 {
     font-size: 2rem;
     margin-top: 10vh;
@@ -39,5 +44,5 @@ export const ServicesStylesContainer = styled(HomeContainer)`
 `;
 
 export const ContactStyledContainer = styled(HomeContainer)`
-  background-image:url(${Image});
+  background-image:url(${""});
 `;

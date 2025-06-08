@@ -4,7 +4,7 @@ import {
   ContactStyledContainer,
   HeroSeccionContainer,
   HomeContainer,
-  ServicesStylesContainer,
+
 } from "./Homestyled";
 import About from "../../components/About/About";
 import Contact from "../../components/Contact/Contact";
