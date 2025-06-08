@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import imageContac from "../../assets/contact.svg";
 export const ContactContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -50,10 +49,7 @@ export const WhatsAppLink = styled.div`
   border-radius: 5px;
   padding: 40px 0;
   margin: 40px 0;
-  background-image: url(${imageContac});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: var(--color-back-body);
   h1 {
     color: #f1efd4;
     font-size: 1.5rem;
