@@ -20,16 +20,16 @@ function Contact() {
           </p>
           <DataContactContainer>
             <BiChevronDownCircle
-              style={{ fontSize: "30px", color: "#ffffffc0" }}
+              style={{ fontSize: "30px", color: "#666666" }}
             />
             <p>
-              <FaPhone /> <a href="tel:+541160832758">Tel: 11 6083-2758</a>
+              <FaPhone style={{ color: "#666666" }} /> <a href="tel:+541160832758">Tel: 11 6083-2758</a>
             </p>
             <p>
-              <FaMobile /> <a href="tel:+541140254010">Cel: 11 4025-4010</a>
+              <FaMobile style={{ color: "#666666" }} /> <a href="tel:+541140254010">Cel: 11 4025-4010</a>
             </p>
             <p>
-              <FaWhatsapp />
+              <FaWhatsapp style={{ color: "#666666" }} />
               <a
                 className="whatsapp-btn"
                 href="https://api.whatsapp.com/send?text=Buen%20día%20quisiera%20consultar%20sobre%20&amp;phone=5491140254010"

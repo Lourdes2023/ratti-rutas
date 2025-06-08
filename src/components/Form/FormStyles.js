@@ -7,7 +7,8 @@ export const FormContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  width: 100%;
+  width: 45%;
+  max-width: 500px;
   height: 100%;
   color: white;
   & p {
@@ -19,7 +20,7 @@ export const FormContainer = styled.div`
     margin-left: 1em;
     color: white;
   }
-  @media (max-width: 980px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -33,7 +34,7 @@ export const Form = styled(FormikForm)`
   text-align: center;
   padding: 40px 0px;
   margin-top: 5vh;
-  width: 50%;
+  width: 100%;
   border: 1px solid var(--color-border);
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
