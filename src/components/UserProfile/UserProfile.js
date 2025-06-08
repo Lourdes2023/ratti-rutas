@@ -1,19 +1,14 @@
 import styled from "styled-components";
-import Image1 from "../../assets/heroImg.svg";
 export const TramiteContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f5f5f5;
+  background-color: var(--color-back-About);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 20vh;
-  background-image: url("${Image1}");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   & h1 {
     padding: 1em;
     border-radius: 5px;

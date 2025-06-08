@@ -68,7 +68,7 @@ export const WhatsAppLink = styled.div`
 export const DataContactContainer = styled.div`
   text-align: center;
   width: 90%;
-  background: var(--color-backg-contact);
+  background: var(--color-back-Services);
   margin-bottom: 250px;
   p {
     color: #f1efd4;

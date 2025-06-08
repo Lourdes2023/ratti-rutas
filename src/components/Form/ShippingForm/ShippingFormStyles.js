@@ -28,6 +28,6 @@ export const ShippingFormTitle = styled.h1`
   color: var(--color-text-contact);
   margin-bottom: 20px;
   padding: 20px;
-  background: var(--color-backg-contact);
+  background: var(--color-back-Services);
   border-radius: 25px;
 `;
