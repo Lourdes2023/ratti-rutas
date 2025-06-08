@@ -50,8 +50,8 @@ const Navbar = () => {
           </MenuLink>
         
           <MenuLink
-            to={"/Contact"}
-            className={location.pathname === "/Contact" ? "active" : ""}
+            to={"/contact"}
+            className={location.pathname === "/contact" ? "active" : ""}
           >
            Contacto
           </MenuLink>
