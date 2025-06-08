@@ -3,7 +3,7 @@ import {
   CategoryStyledContainer,
   ProductsStyledContainer,
 } from "./ProductsStyles";
-import ProductsCard from "../../components/CardProductos/ProductCards";
+import ProductGrid from "../../components/ProductDisplay/ProductGrid";
 import Categorias from "../../components/Categorias/Categorias";
 export const Products = () => {
   return (
@@ -11,7 +11,7 @@ export const Products = () => {
       <CategoryStyledContainer>
         <h3>Seleccione Categoria</h3>
         <Categorias /> 
-        <ProductsCard />
+        <ProductGrid />
       </CategoryStyledContainer>
      
     </>

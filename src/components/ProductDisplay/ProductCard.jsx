@@ -6,12 +6,12 @@ import {
   ProductImage,
   ProductTitle,
   ProductWrapper,
-} from "./ProductCardsStyles";
+} from "./ProductStyles";
 import { useDispatch } from "react-redux";
 import { addtocart } from "../../redux/cart/Slice.Cart";
 import ButtonCart from "../UI/Button/ButtonCart";
 
-const Product = ({ id, title, price, img, desc }) => {
+const ProductCard = ({ id, title, price, img, desc }) => {
   const dispatch = useDispatch();
 
   return (
@@ -30,4 +30,4 @@ const Product = ({ id, title, price, img, desc }) => {
   );
 };
 
-export default Product;
+export default ProductCard;

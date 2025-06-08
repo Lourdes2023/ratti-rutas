@@ -40,8 +40,8 @@ const Login = () => {
           <Form>
             <img src={Logo} alt="logo" />
             <TitleContainer>
-              <h2>Iniciar sesion</h2>
-              <p>Por favor, complete el siguiente formulario</p>
+              <h2>Iniciar Sesión</h2>
+              <p>Ingrese sus credenciales para continuar</p>
             </TitleContainer>
             <LoginStyled>
               <Input
@@ -56,7 +56,7 @@ const Login = () => {
                 type="password"
                 placeholder="Ingrese su contraseña"
               />
-              <Submit>iniciar sesion</Submit>
+              <Submit>Iniciar Sesión</Submit>
             </LoginStyled>
           </Form>
         </LoginStyledContainer>

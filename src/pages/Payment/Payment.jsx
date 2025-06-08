@@ -15,7 +15,12 @@ const Payment = () => {
 
   return (
     <>
-      {!showPaymentForm && <ShippingForm />}
+      {!showPaymentForm && (
+        <>
+          <p>Complete los datos de envío para continuar</p>
+          <ShippingForm />
+        </>
+      )}
       {showPaymentForm && <PaymentForm />}
     </>
   );
