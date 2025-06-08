@@ -40,9 +40,11 @@ export default function Header({ cartCount }) {
     <HeaderContainer>
       <Logo>Funeraria Serenidad</Logo>
       <Nav>
-        <a href="#">Inicio</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
         <a href="#catalogo">Catálogo</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#carrito">Carrito</a>
         <CartCount>{cartCount}</CartCount>
       </Nav>
     </HeaderContainer>
