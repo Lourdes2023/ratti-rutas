@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import ImageAbout from "../../assets/fondogrisflor.png";
-import Image from "../../assets/fondogrisflor2.png";
 export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -23,14 +21,10 @@ export const HomeContainer = styled.div`
 
 export const HeroSeccionContainer = styled(HomeContainer)``;
 export const AboutStyledContainer = styled(HomeContainer)`
-  background-image: url(${ImageAbout});
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: var(--color-back-body);
   @media (max-width: 980px) {
     justify-content: center;
     align-items: center;
-    background-position: 100%;
-    background-size: 100%;
   }
 `;
 export const ServicesStylesContainer = styled(HomeContainer)`
@@ -39,5 +33,5 @@ export const ServicesStylesContainer = styled(HomeContainer)`
 `;
 
 export const ContactStyledContainer = styled(HomeContainer)`
-  background-image:url(${Image});
+  background-color: var(--color-back-body);
 `;

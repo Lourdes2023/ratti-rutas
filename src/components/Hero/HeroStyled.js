@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import BgHero from "../../assets/fondogrisflor.png";
 
 export const HeroSeccionContainer = styled.section`
   display: flex;
@@ -9,9 +8,6 @@ export const HeroSeccionContainer = styled.section`
   padding: 8rem 1rem;
   width: 100%;
   background-color: var(--color-back-body);
-  background-image: url(${BgHero});
-  background-size: cover;
-  background-position: center;
 `;
 
 export const HeroContainer = styled.div`

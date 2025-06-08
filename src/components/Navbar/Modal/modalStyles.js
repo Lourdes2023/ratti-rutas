@@ -87,7 +87,7 @@ export const ProductContainerStyled = styled.div`
   width: 210px;
   height: 190px;
   border-radius: 15px;
-  background: var(--color-backg-contact);
+  background: var(--color-back-body);
   & img {
     width: 80px;
     height: 80px;
