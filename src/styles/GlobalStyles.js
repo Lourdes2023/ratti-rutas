@@ -59,10 +59,10 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
-    color:white ;
+    color: #8d8d8d;
 }
 a:visited {
-    color: white;
+    color: #8d8d8d;
 }
 li {
     list-style: none;
