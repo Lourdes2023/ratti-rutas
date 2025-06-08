@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BgHero from "../../assets/portada.svg";
+import BgHero from "../../assets/fondogrisflor.png";
 
 export const HeroSeccionContainer = styled.section`
   display: flex;

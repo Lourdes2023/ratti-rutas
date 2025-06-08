@@ -1,95 +1,66 @@
-import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const AboutStylesContainer = styled.div`
+export const AboutStylesContainer = styled.section`
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 10vh;
-  padding: 50px;
-  border-radius: 18px;
-  text-align: center;
-  width: 100%;
-  @media (max-width: 780px) {
-    padding: 0px;
-  }
+  padding: 4rem 1rem;
+  background-color: var(--color-back-body);
 `;
+
 export const AboutContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 50px;
-  width: 80%;
-  @media (max-width: 780px) {
-  }
+  max-width: 1000px;
+  width: 100%;
 `;
+
 export const AboutSectionConten = styled.div`
   display: flex;
-  justify-content: center;
-  flex-direction: row;
   align-items: center;
-  padding: 50px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-align: right;
-  gap: 20px;
-  border: 10px solid white;
-  border-radius: 5px;
-  background-image: var(--color-back-About);
+  gap: 2rem;
+  background: #ffffff;
+  border: 1px solid #6f4e37;
+  border-radius: 12px;
+  padding: 2rem;
+
   @media (max-width: 780px) {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+    flex-direction: column;
     text-align: center;
-    flex-direction: column;
-  }
-  p {
-    color: var(--color-secondary-blue);
-    font-size: 18px;
-    @media (max-width: 780px) {
-      font-size: 16px;
-      font-weight: 300;
-    }
-  }
-  h2 {
-    font-size: 36px;
-    color: white;
-    border-radius: 10px;
-    background-color: var(--color-button-hoverCart);
-    padding: 10px 20px;
-  }
-  img {
-    width: 80%;
-  }
-  .AboutText {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: start;
-    width: 50%;
-    padding: 20px;
-    border-radius: 12px;
-    @media (max-width: 780px) {
-      width: 100%;
-      padding: 10px;
-    }
   }
 
-  .AboutImage {
+  p {
+    color: var(--color-text-dark);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    color: #5b1f29;
+    font-size: 2rem;
+    margin: 0 0 1rem;
+    border-left: 4px solid #5b1f29;
+    padding-left: 0.5rem;
+  }
+
+  img {
+    width: 100%;
     border-radius: 12px;
-    width: 50%;
-    @media (max-width: 780px) {
-      width: 100%;
-    }
+  }
+
+  .AboutText,
+  .AboutImage {
+    flex: 1;
   }
 `;
-export const fadeInAnimation = styled(motion.div)`
-  opacity: 0;
-  transition: opacity 0.5s;
 
-  &.visible {
-    opacity: 1;
+export const AboutButton = styled.a`
+  display: inline-block;
+  background-color: #497d75;
+  color: #ffffff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #5b1f29;
   }
 `;
