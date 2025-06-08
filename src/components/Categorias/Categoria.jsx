@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 import {
-  CategoryContainer,
+  CategoryItem,
+  CategoryCard,
   CategoryImage,
   CategoryTitle,
-  CategoryConten,
 } from "./CategoriaStyles";
 import { useSelector, useDispatch } from "react-redux";
 import { selectCategorias } from "../../redux/categorias/categoriesSlice";
@@ -14,15 +14,15 @@ const Categoria = ({ img, category }) => {
 
   return (
     <motion.div whileHover={{ scale: 1.05 }}>
-      <CategoryContainer
+      <CategoryItem
         selected={category === selectedCategory}
         onClick={() => dispatch(selectCategorias(category))}
       >
-        <CategoryConten>
+        <CategoryCard>
           <CategoryImage src={img} alt={category} />
           <CategoryTitle>{category}</CategoryTitle>
-        </CategoryConten>
-      </CategoryContainer>
+        </CategoryCard>
+      </CategoryItem>
     </motion.div>
   );
 };

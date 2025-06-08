@@ -1,64 +1,56 @@
 import styled from "styled-components";
 
-export const ProductContainer = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-image: var(--color-title-Grad1);
-  padding: 60px;
-  width: 80%;
-  margin: 0 auto;
-  h2 {
-    font-size: 24px;
-    color: var(--primary-color);
-    margin-bottom: 40px;
-  }
-  @media (max-width: 780px) {
-    padding: 0;
-  }
-`;
-
-export const ProductWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-bottom: 20px;
-`;
-
-export const ProductContent = styled.div`
+export const ProductsSection = styled.section`
+  width: 100%;
+  padding: 2rem 1rem;
+  margin-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  width: 240px;
-  height: 340px;
-  padding: 20px;
-  border-radius: 5px;
-  background-color: var(--background-color);
+  background: var(--color-crema-claro);
+  gap: 2rem;
+`;
+
+export const CardGrid = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+`;
+
+export const CardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 240px;
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--background-color);
   box-shadow: var(--box-shadow-color);
-  transition: all 0.3s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  text-align: center;
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: var(--box-shadow-hover-color);
   }
 `;
 
-export const ProductImage = styled.img`
+export const CardImage = styled.img`
   width: 100%;
-  max-height: 200px;
+  max-height: 160px;
   object-fit: cover;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 `;
 
-export const ProductTitle = styled.h4`
-  font-size: 18px;
+export const CardTitle = styled.h4`
+  margin: 0.5rem 0;
+  font-size: 1rem;
   color: var(--primary-color);
 `;
 
-export const ProductDescription = styled.p`
-  font-size: 14px;
+export const CardDescription = styled.p`
+  font-size: 0.875rem;
   color: var(--secondary-color);
 `;

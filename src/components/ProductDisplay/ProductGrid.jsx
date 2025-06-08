@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { ProductContainer, ProductWrapper } from "./ProductStyles";
+import { ProductsSection, CardGrid } from "./ProductStyles";
 import ProductCard from "./ProductCard";
 import ButtonCart from "../UI/Button/ButtonCart";
 import { ButtonContainerStyle } from "../UI/Button/ButtonStyled";
@@ -23,8 +23,8 @@ const ProductGrid = () => {
   console.log("limit:", limit);
   return (
     <>
-      <ProductContainer>
-        <ProductWrapper>
+      <ProductsSection>
+        <CardGrid>
           {Object.entries(products).map(([, flowers]) => {
             return flowers.map((flower) => {
               if (limit >= flower.id || selectedCategory) {
@@ -33,8 +33,8 @@ const ProductGrid = () => {
               return null;
             });
           })}
-        </ProductWrapper>
-      </ProductContainer>
+        </CardGrid>
+      </ProductsSection>
       {!selectedCategory && (
         <ButtonContainerStyle>
           <ButtonCart
