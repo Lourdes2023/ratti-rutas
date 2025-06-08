@@ -5,18 +5,22 @@ export const InputBoxStyled = styled.div`
   flex-direction: column;
   margin: 20px 0px;
   padding: 10px;
-  background: var(--color-buttonLogin-bg);
+  background: transparent;
 `;
 
 export const InputStyled = styled.input`
   padding: 10px;
-  border: 1px solid var(--color-primary-blue);
+  border: 1px solid var(--color-brown-earth);
   border-radius: 5px;
   font-size: 1rem;
   outline: none;
-  background-color: aliceblue;
+  background-color: var(--color-crema-claro);
+  color: var(--color-bordo-profundo);
+  &::placeholder {
+    color: var(--color-gris-piedra);
+  }
   &:focus {
-    border-color: var(--color-primary);
+    border-color: var(--color-sage-green);
   }
 
 `;
