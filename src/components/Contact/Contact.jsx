@@ -6,7 +6,6 @@ import {
 } from "./ContactStyled";
 import ForContact from "../Form/Form";
 import { FaPhone, FaMobile, FaWhatsapp } from "react-icons/fa";
-import { BiChevronDownCircle } from "react-icons/bi";
 
 function Contact() {
   return (
@@ -19,9 +18,6 @@ function Contact() {
             <br /> Estamos listos para asistirte.
           </p>
           <DataContactContainer>
-            <BiChevronDownCircle
-              style={{ fontSize: "30px", color: "var(--color-bordo-profundo)" }}
-            />
             <p>
               <FaPhone style={{ color: "var(--color-bordo-profundo)" }} /> <a href="tel:+541160832758">Tel: 11 6083-2758</a>
             </p>
@@ -45,7 +41,7 @@ function Contact() {
             </p>
           </DataContactContainer>
         </WhatsAppLink>
-      </InfoContainer>{" "}
+      </InfoContainer>
       <ForContact />
     </ContactContainer>
   );

@@ -78,11 +78,18 @@ export const DataContactContainer = styled.div`
   text-align: center;
   width: 90%;
   margin-bottom: 1rem;
-  background: transparent;
+  background: var(--color-crema-claro);
+  padding: 1rem;
+  border: 1px solid var(--color-brown-earth);
+  border-radius: 8px;
   p {
     color: var(--color-gris-piedra);
     font-size: 1rem;
     border-bottom: 0.5px solid var(--color-brown-earth);
+    padding: 0.5rem 0;
+  }
+  p:last-child {
+    border-bottom: none;
   }
   a {
     margin-left: 10px;
